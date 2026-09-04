@@ -7,7 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { OrganizationService } from '../../organization.service';
 import { SettingsService } from '@mifosx-lib/settings/settings.service';
 import { Dates } from '@mifosx-lib/core/utils/dates';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { PopoverService } from '@mifosx-lib/configuration-wizard/popover/popover.service';
 import { ConfigurationWizardService } from '@mifosx-lib/configuration-wizard/configuration-wizard.service';
 

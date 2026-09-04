@@ -1,6 +1,6 @@
 /** Angular Imports */
 import { Component, OnInit, OnChanges, Input } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { UntypedFormControl } from '@angular/forms';
 
 /** Custom Dialogs */
@@ -11,7 +11,7 @@ import { FormfieldBase } from '@mifosx-lib/form-dialog/formfield/model/formfield
 import { InputBase } from '@mifosx-lib/form-dialog/formfield/model/input-base';
 import { DatepickerBase } from '@mifosx-lib/form-dialog/formfield/model/datepicker-base';
 import { Dates } from '@mifosx-lib/core/utils/dates';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
 import { TranslateService } from '@ngx-translate/core';
 
 /**

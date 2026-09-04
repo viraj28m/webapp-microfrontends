@@ -9,7 +9,7 @@ import { DeleteDialogComponent } from '@mifosx-lib/delete-dialog/delete-dialog.c
 /** Custom Services */
 import { CentersService } from '@mifosx-app/centers/centers.service';
 import { GroupsService } from '@mifosx-app/groups/groups.service';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 
 
 @Component({

@@ -1,7 +1,7 @@
 /** Angular Imports */
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { FormfieldBase } from '@mifosx-lib/form-dialog/formfield/model/formfield-base';
 import { InputBase } from '@mifosx-lib/form-dialog/formfield/model/input-base';
 import { SelectBase } from '@mifosx-lib/form-dialog/formfield/model/select-base';

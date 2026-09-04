@@ -9,7 +9,7 @@ import { DeleteDialogComponent } from '@mifosx-lib/delete-dialog/delete-dialog.c
 /** Custom Services */
 import { GroupsService } from '@mifosx-app/groups/groups.service';
 import { ClientsService } from '@mifosx-app/clients/clients.service';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 
 /**
  * Manage Group Members Component

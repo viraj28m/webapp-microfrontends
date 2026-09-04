@@ -1,16 +1,16 @@
 /** Angular Imports */
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { UntypedFormControl } from '@angular/forms';
-import { MatPaginator } from '@angular/material/paginator';
+import { MatLegacyPaginator as MatPaginator } from '@angular/material/legacy-paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Dates } from '@mifosx-lib/core/utils/dates';
 import { SavingsAccountTransaction, SavingsAccountTransactionType } from '@mifosx-app/savings/models/savings-account-transaction.model';
 import { SavingsService } from '@mifosx-app/savings/savings.service';
 import { SettingsService } from '@mifosx-lib/settings/settings.service';
 import { UndoTransactionDialogComponent } from '../custom-dialogs/undo-transaction-dialog/undo-transaction-dialog.component';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 
 /**
  * Transactions Tab Component.

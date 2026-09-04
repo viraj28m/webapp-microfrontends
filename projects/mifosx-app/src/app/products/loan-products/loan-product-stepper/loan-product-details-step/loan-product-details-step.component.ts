@@ -2,7 +2,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Dates } from '@mifosx-lib/core/utils/dates';
-import { TooltipPosition } from '@angular/material/tooltip';
+import { LegacyTooltipPosition as TooltipPosition } from '@angular/material/legacy-tooltip';
 
 /** Custom Services */
 import { SettingsService } from '@mifosx-lib/settings/settings.service';

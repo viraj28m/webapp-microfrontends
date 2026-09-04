@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 /** Custom Dialogs */
 import { DeleteDialogComponent } from '@mifosx-lib/delete-dialog/delete-dialog.component';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 
 /** Custom Services */
 import { OrganizationService } from '@mifosx-app/organization/organization.service';

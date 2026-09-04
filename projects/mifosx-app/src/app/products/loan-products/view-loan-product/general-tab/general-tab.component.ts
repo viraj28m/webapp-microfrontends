@@ -5,7 +5,7 @@ import { FormfieldBase } from '@mifosx-lib/form-dialog/formfield/model/formfield
 import { InputBase } from '@mifosx-lib/form-dialog/formfield/model/input-base';
 import { TranslateService } from '@ngx-translate/core';
 import { FormDialogComponent } from '@mifosx-lib/form-dialog/form-dialog.component';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { ProductsService } from '@mifosx-app/products/products.service';
 import { SettingsService } from '@mifosx-lib/settings/settings.service';
 

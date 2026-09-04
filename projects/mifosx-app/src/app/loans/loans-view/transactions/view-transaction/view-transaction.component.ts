@@ -1,7 +1,7 @@
 /** Angular Imports */
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 
 /** Custom Services */
 import { LoansService } from '@mifosx-app/loans/loans.service';
@@ -13,7 +13,7 @@ import { FormfieldBase } from '@mifosx-lib/form-dialog/formfield/model/formfield
 import { InputBase } from '@mifosx-lib/form-dialog/formfield/model/input-base';
 import { SelectBase } from '@mifosx-lib/form-dialog/formfield/model/select-base';
 import { FormDialogComponent } from '@mifosx-lib/form-dialog/form-dialog.component';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
 import { LoanTransactionType } from '@mifosx-app/loans/models/loan-transaction-type.model';
 import { AlertService } from '@mifosx-lib/core/alert/alert.service';
 import { TranslateService } from '@ngx-translate/core';

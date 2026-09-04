@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { AdvancedCreditAllocation, AdvancedPaymentAllocation, AdvancedPaymentStrategy, CreditAllocation, CreditAllocationOrder, PaymentAllocation, PaymentAllocationOrder, PaymentAllocationTransactionType } from './payment-allocation-model';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { FormfieldBase } from '@mifosx-lib/form-dialog/formfield/model/formfield-base';
 import { SelectBase } from '@mifosx-lib/form-dialog/formfield/model/select-base';
 import { FormDialogComponent } from '@mifosx-lib/form-dialog/form-dialog.component';
-import { MatTabGroup } from '@angular/material/tabs';
+import { MatLegacyTabGroup as MatTabGroup } from '@angular/material/legacy-tabs';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
