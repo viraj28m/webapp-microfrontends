@@ -89,7 +89,7 @@ import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
   providers: [
     {
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
-      useValue: { appearance: 'standard' }
+      useValue: { appearance: 'fill' }
     },
     {
       provide: STEPPER_GLOBAL_OPTIONS,
