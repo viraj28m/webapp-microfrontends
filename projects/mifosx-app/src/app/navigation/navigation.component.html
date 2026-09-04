@@ -4,8 +4,7 @@
 
     <div class="navigation-column">
 
-      <mat-card appearance="outlined" fxLayout="column">
-      <mat-card class="navigation-card">
+      <mat-card appearance="outlined" class="navigation-card">
 
         <mat-card-content class="navigation-card-content">
 
@@ -62,8 +61,7 @@
 
     <div class="navigation-column">
 
-      <mat-card appearance="outlined" fxLayout="column" *ngIf="selectedItem">
-      <mat-card class="navigation-card" *ngIf="selectedItem">
+      <mat-card appearance="outlined" class="navigation-card" *ngIf="selectedItem">
 
         <ng-container *ngIf="selectedItem.itemType === 'office'">
           <mifosx-office-navigation [officeData]="selectedItem" [employeeData]="employeeData"></mifosx-office-navigation>

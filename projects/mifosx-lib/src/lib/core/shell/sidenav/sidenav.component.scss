@@ -158,6 +158,10 @@
       }
     }
 
+    mat-nav-list a.mat-line {
+      display: none;
+    }
+
     .icon-menu {
       padding: 8px 0 0;
       width: 4rem;

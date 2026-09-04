@@ -7,7 +7,8 @@
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "report": "playwright show-report",
-    "compare": "node scripts/compare.js"
+    "compare": "node scripts/compare.js",
+    "dashboard": "node scripts/dashboard.js"
   },
   "devDependencies": {
     "@playwright/test": "1.62.1",
