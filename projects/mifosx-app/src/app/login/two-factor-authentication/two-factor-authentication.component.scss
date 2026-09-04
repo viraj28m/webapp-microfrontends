@@ -21,3 +21,27 @@
     margin: 0.5rem 0;
   }
 }
+
+.two-factor-auth-form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  .two-factor-auth-delivery-methods {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .two-factor-auth-delivery-methods,
+  .two-factor-auth-input,
+  .two-factor-auth-button,
+  .two-factor-auth-button-fill {
+    align-self: center;
+  }
+
+  .two-factor-auth-button-fill {
+    width: 100%;
+    min-width: 100%;
+  }
+}

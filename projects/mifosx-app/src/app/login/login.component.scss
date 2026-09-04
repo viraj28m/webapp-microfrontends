@@ -1,9 +1,32 @@
+// Breakpoints mirror the @angular/flex-layout aliases previously used here
+// (lt-sm < 600px, gt-sm >= 960px, lt-lg < 1280px).
+$login-lt-sm: 599.98px;
+$login-gt-sm: 960px;
+$login-lt-lg: 1279.98px;
+
+.login-page {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
 .cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex: 1 1 100%;
+  box-sizing: border-box;
   background: url("../../assets/images/cover_image_resized.webp") no-repeat center center;
   background-size: cover;
   position: relative;
   z-index: 0;
-  max-width: 70vw;
+  max-width: 70%;
+
+  @media (max-width: $login-lt-sm) {
+    display: none;
+  }
 
   &::after {
     content: "";
@@ -46,12 +69,63 @@
 }
 
 .login-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   box-shadow: 1px 1px 50px #000;
   height: 100vh;
   width: 100%;
-  min-width: 21.5 rem;
+
+  @media (min-width: $login-gt-sm) {
+    flex: 1 0 30%;
+  }
 
   .img-container {
     max-width: 18rem;
+  }
+
+  .login-section {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+    box-sizing: border-box;
+  }
+
+  .login-settings {
+    flex-direction: row-reverse;
+  }
+
+  .login-spacer {
+    flex: 1 1 0%;
+    box-sizing: border-box;
+  }
+
+  .login-section-centered {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .login-form-section {
+    flex: 3 0 auto;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+
+  .information-list {
+    flex: 3 0 auto;
+    align-self: center;
+
+    @media (max-width: $login-lt-lg) {
+      display: none;
+    }
+  }
+
+  .login-reload {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-sizing: border-box;
   }
 }

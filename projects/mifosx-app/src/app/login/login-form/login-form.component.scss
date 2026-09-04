@@ -14,3 +14,15 @@
     margin: 0.5rem 0;
   }
 }
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  .login-input,
+  .login-button,
+  mat-checkbox {
+    align-self: center;
+  }
+}

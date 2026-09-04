@@ -1,0 +1,15 @@
+
+.table-toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  box-sizing: border-box;
+
+  .table-filter {
+    flex: 1 1 100%;
+    max-width: 50%;
+    box-sizing: border-box;
+  }
+}

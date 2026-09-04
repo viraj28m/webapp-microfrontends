@@ -12,3 +12,26 @@ h2 {
     word-wrap: break-word;
   }
 }
+
+.navigation-header {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+:host ::ng-deep .navigation-header > :not(:last-child) {
+  margin-right: 5%;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  .content-cell {
+    flex: 1 1 100%;
+    max-width: 50%;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,40 @@
+// lt-md breakpoint of the @angular/flex-layout aliases previously used here.
+$navigation-lt-md: 959.98px;
+
+.navigation-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  .navigation-column {
+    flex: 1 1 100%;
+    max-width: 48%;
+    box-sizing: border-box;
+
+    &:not(:last-child) {
+      margin-right: 2%;
+    }
+  }
+
+  @media (max-width: $navigation-lt-md) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .navigation-column {
+      max-width: 100%;
+
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 2%;
+      }
+    }
+  }
+}
+
+.navigation-card,
+.navigation-card-content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
