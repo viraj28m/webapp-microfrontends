@@ -1,7 +1,7 @@
-<div [formGroup]="form" fxFlexFill>
+<div class="flex-fill" [formGroup]="form">
 
   <ng-container *ngIf="isInputBase(formfield) || isSelectBase(formfield)">
-    <mat-form-field fxFlexFill>
+    <mat-form-field class="flex-fill">
       <mat-label>{{ formfield.label }}</mat-label>
 
       <input *ngIf="isInputBase(formfield)" [type]="formfield.type" matInput [formControlName]="formfield.controlName"
@@ -22,7 +22,7 @@
   </ng-container>
 
   <ng-container *ngIf="isDatepickerBase(formfield)">
-    <mat-form-field fxFlexFill (click)="datePicker.open()">
+    <mat-form-field class="flex-fill" (click)="datePicker.open()">
       <mat-label>{{ formfield.label }}</mat-label>
       <input matInput [matDatepicker]="datePicker" [min]="formfield.minDate" [max]="formfield.maxDate"
         [formControlName]="formfield.controlName" [required]="formfield.required">
@@ -36,7 +36,7 @@
   </ng-container>
 
   <ng-container *ngIf="isDateTimepickerBase(formfield)">
-    <mat-form-field fxFlexFill>
+    <mat-form-field class="flex-fill">
       <mat-label>{{ formfield.label }}</mat-label>
       <input matInput [ngxMatDatetimePicker]="datetimePicker" [min]="formfield.minDate" [max]="formfield.maxDate"
         [formControlName]="formfield.controlName" [required]="formfield.required">

@@ -1,6 +1,6 @@
 <div *ngIf="isJournalEntryLoaded">
 
-  <div fxLayout="row" fxLayoutAlign="end" class="container m-b-20" *ngIf="dataSource?.data[0].manualEntry">
+  <div class="flex-row flex-justify-end container m-b-20" *ngIf="dataSource?.data[0].manualEntry">
     <button mat-raised-button color="primary" (click)="revertTransaction()"
       *mifosxHasPermission="'REVERSE_JOURNALENTRY'" [disabled]="dataSource?.data[0].reversed">
       <span *ngIf="!dataSource.data[0].reversed">
@@ -16,37 +16,37 @@
 
       <mat-card-content>
 
-        <div fxLayout="row wrap" class="content">
+        <div class="flex-row-wrap content">
 
-          <div fxFlex="25%" fxFlex.lt-md="50%" class="header">
+          <div class="flex-w-25 flex-w-50-lt-md header">
             {{ 'labels.inputs.Office' | translate }}
           </div>
 
-          <div fxFlex="25%" fxFlex.lt-md="50%">
+          <div class="flex-w-25 flex-w-50-lt-md">
             {{ dataSource.data[0].officeName }}
           </div>
 
-          <div fxFlex="25%" fxFlex.lt-md="50%" class="header">
+          <div class="flex-w-25 flex-w-50-lt-md header">
             {{ 'labels.inputs.Transaction Date' | translate }}
           </div>
 
-          <div fxFlex="25%" fxFlex.lt-md="50%">
+          <div class="flex-w-25 flex-w-50-lt-md">
             {{ dataSource.data[0].transactionDate | dateFormat }}
           </div>
 
-          <div fxFlex="25%" fxFlex.lt-md="50%" class="header">
+          <div class="flex-w-25 flex-w-50-lt-md header">
             {{ 'labels.inputs.Created By' | translate }}
           </div>
 
-          <div fxFlex="25%" fxFlex.lt-md="50%">
+          <div class="flex-w-25 flex-w-50-lt-md">
             {{ dataSource.data[0].createdByUserName }}
           </div>
 
-          <div fxFlex="25%" fxFlex.lt-md="50%" class="header">
+          <div class="flex-w-25 flex-w-50-lt-md header">
             {{ 'labels.inputs.Submitted on' | translate }}
           </div>
 
-          <div fxFlex="25%" fxFlex.lt-md="50%">
+          <div class="flex-w-25 flex-w-50-lt-md">
             {{ dataSource.data[0].submittedOnDate | datetimeFormat }}
           </div>
 
@@ -58,7 +58,7 @@
 
   </div>
 
-  <div class="mat-elevation-z8 container" fxLayoutAlign="center" fxLayout="row wrap">
+  <div class="flex-justify-center flex-row-wrap mat-elevation-z8 container">
 
     <table mat-table [dataSource]="dataSource" matSort>
 
@@ -103,7 +103,7 @@
 
     </table>
 
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="5px" class="m-t-15 m-b-15">
+    <div class="flex-row flex-column-xs flex-justify-center flex-gap-5 m-t-15 m-b-15">
       <button type="button" color="primary" mat-raised-button (click)="goBack()">{{ 'labels.buttons.Back' | translate
         }}</button>
     </div>
@@ -119,7 +119,7 @@
     </div>
   </div>
 
-  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="5px" class="m-t-15 m-b-15">
+  <div class="flex-row flex-column-xs flex-justify-center flex-gap-5 m-t-15 m-b-15">
     <button type="button" color="primary" mat-raised-button (click)="goBack()">{{ 'labels.buttons.Back' | translate
       }}</button>
   </div>
