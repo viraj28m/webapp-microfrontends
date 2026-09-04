@@ -1,18 +1,20 @@
 # Parity report: angular14
 
 - Base URL: http://localhost:4200
-- Started: 2026-09-04T07:05:39.785Z
-- Result: **7/7 passed**, 0 failed, 0 skipped
+- Started: 2026-09-04T15:00:08.300Z
+- Result: **9/9 passed**, 0 failed, 0 skipped
 
 | Flow | Status | Duration |
 |---|---|---|
-| authenticated shell renders toolbar, sidebar and user identity | passed | 8.7s |
-| Institution menu exposes Clients / Groups / Centers and opens Clients | passed | 9.3s |
-| login page renders and demo credentials authenticate | passed | 9.6s |
-| navigate to Chart of Accounts and verify GL account listing | passed | 9.8s |
-| sidebar navigation to Dashboard and back Home | passed | 8.4s |
-| view a single GL account (read-only detail page) | passed | 10.7s |
-| wrong password is rejected and user stays on login | passed | 10.5s |
+| authenticated shell renders toolbar, sidebar and user identity | passed | 8.0s |
+| Institution menu exposes Clients / Groups / Centers and opens Clients | passed | 7.9s |
+| login page layout: cover panel shown on desktop, hidden on phones | passed | 6.4s |
+| login page renders and demo credentials authenticate | passed | 8.8s |
+| navigate to Chart of Accounts and verify GL account listing | passed | 9.5s |
+| sidebar navigation to Dashboard and back Home | passed | 8.0s |
+| sidebar opens Navigation and office drill-down renders the detail card | passed | 9.1s |
+| view a single GL account (read-only detail page) | passed | 8.7s |
+| wrong password is rejected and user stays on login | passed | 9.8s |
 
 ## authenticated shell renders toolbar, sidebar and user identity
 
@@ -38,6 +40,17 @@
 |---|---|---|
 | institution menu open | /home | screenshots/institution-menu-exposes-clients-groups-centers-and-opens-clients--institution-menu-open.png |
 | clients list | /clients | screenshots/institution-menu-exposes-clients-groups-centers-and-opens-clients--clients-list.png |
+
+## login page layout: cover panel shown on desktop, hidden on phones
+
+| Fact | Value |
+|---|---|
+| login-cover-hidden-phone | true |
+| login-cover-visible-desktop | true |
+
+| Checkpoint | Route | Screenshot |
+|---|---|---|
+| login page phone | /login | screenshots/login-page-layout-cover-panel-shown-on-desktop-hidden-on-phones--login-page-phone.png |
 
 ## login page renders and demo credentials authenticate
 
@@ -79,6 +92,21 @@
 | Checkpoint | Route | Screenshot |
 |---|---|---|
 | dashboard | /dashboard | screenshots/sidebar-navigation-to-dashboard-and-back-home--dashboard.png |
+
+## sidebar opens Navigation and office drill-down renders the detail card
+
+| Fact | Value |
+|---|---|
+| navigation-office-detail-card | true |
+| navigation-stacked-narrow | true |
+| navigation-two-columns-desktop | true |
+| route:/navigation | true |
+
+| Checkpoint | Route | Screenshot |
+|---|---|---|
+| navigation page | /navigation | screenshots/sidebar-opens-navigation-and-office-drill-down-renders-the-detail-card--navigation-page.png |
+| office selected | /navigation | screenshots/sidebar-opens-navigation-and-office-drill-down-renders-the-detail-card--office-selected.png |
+| office selected narrow | /navigation | screenshots/sidebar-opens-navigation-and-office-drill-down-renders-the-detail-card--office-selected-narrow.png |
 
 ## view a single GL account (read-only detail page)
 

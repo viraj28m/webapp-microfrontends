@@ -1,11 +1,11 @@
 {
   "runLabel": "angular14",
   "baseUrl": "http://localhost:4200",
-  "startedAt": "2026-09-04T07:05:39.785Z",
-  "finishedAt": "2026-09-04T07:06:47.613Z",
+  "startedAt": "2026-09-04T15:00:08.300Z",
+  "finishedAt": "2026-09-04T15:01:25.572Z",
   "summary": {
-    "total": 7,
-    "passed": 7,
+    "total": 9,
+    "passed": 9,
     "failed": 0,
     "skipped": 0
   },
@@ -14,7 +14,7 @@
       "flow": "authenticated shell renders toolbar, sidebar and user identity",
       "file": "tests/02-shell.spec.ts",
       "status": "passed",
-      "durationMs": 8661,
+      "durationMs": 8039,
       "facts": [
         {
           "key": "sidebar-identity",
@@ -46,7 +46,7 @@
       "flow": "Institution menu exposes Clients / Groups / Centers and opens Clients",
       "file": "tests/02-shell.spec.ts",
       "status": "passed",
-      "durationMs": 9276,
+      "durationMs": 7880,
       "facts": [
         {
           "key": "clients-page-actions",
@@ -71,10 +71,33 @@
       ]
     },
     {
+      "flow": "login page layout: cover panel shown on desktop, hidden on phones",
+      "file": "tests/01-login.spec.ts",
+      "status": "passed",
+      "durationMs": 6380,
+      "facts": [
+        {
+          "key": "login-cover-hidden-phone",
+          "value": true
+        },
+        {
+          "key": "login-cover-visible-desktop",
+          "value": true
+        }
+      ],
+      "checkpoints": [
+        {
+          "name": "login page phone",
+          "file": "login-page-layout-cover-panel-shown-on-desktop-hidden-on-phones--login-page-phone.png",
+          "route": "/login"
+        }
+      ]
+    },
+    {
       "flow": "login page renders and demo credentials authenticate",
       "file": "tests/01-login.spec.ts",
       "status": "passed",
-      "durationMs": 9550,
+      "durationMs": 8830,
       "facts": [
         {
           "key": "login-button-disabled-when-empty",
@@ -115,7 +138,7 @@
       "flow": "navigate to Chart of Accounts and verify GL account listing",
       "file": "tests/03-chart-of-accounts.spec.ts",
       "status": "passed",
-      "durationMs": 9824,
+      "durationMs": 9503,
       "facts": [
         {
           "key": "gl-account-types-seen",
@@ -156,7 +179,7 @@
       "flow": "sidebar navigation to Dashboard and back Home",
       "file": "tests/02-shell.spec.ts",
       "status": "passed",
-      "durationMs": 8417,
+      "durationMs": 7996,
       "facts": [
         {
           "key": "route:/dashboard",
@@ -176,10 +199,51 @@
       ]
     },
     {
+      "flow": "sidebar opens Navigation and office drill-down renders the detail card",
+      "file": "tests/04-navigation-page.spec.ts",
+      "status": "passed",
+      "durationMs": 9116,
+      "facts": [
+        {
+          "key": "navigation-office-detail-card",
+          "value": true
+        },
+        {
+          "key": "navigation-stacked-narrow",
+          "value": true
+        },
+        {
+          "key": "navigation-two-columns-desktop",
+          "value": true
+        },
+        {
+          "key": "route:/navigation",
+          "value": true
+        }
+      ],
+      "checkpoints": [
+        {
+          "name": "navigation page",
+          "file": "sidebar-opens-navigation-and-office-drill-down-renders-the-detail-card--navigation-page.png",
+          "route": "/navigation"
+        },
+        {
+          "name": "office selected",
+          "file": "sidebar-opens-navigation-and-office-drill-down-renders-the-detail-card--office-selected.png",
+          "route": "/navigation"
+        },
+        {
+          "name": "office selected narrow",
+          "file": "sidebar-opens-navigation-and-office-drill-down-renders-the-detail-card--office-selected-narrow.png",
+          "route": "/navigation"
+        }
+      ]
+    },
+    {
       "flow": "view a single GL account (read-only detail page)",
       "file": "tests/03-chart-of-accounts.spec.ts",
       "status": "passed",
-      "durationMs": 10721,
+      "durationMs": 8683,
       "facts": [
         {
           "key": "first-gl-account",
@@ -206,7 +270,7 @@
       "flow": "wrong password is rejected and user stays on login",
       "file": "tests/01-login.spec.ts",
       "status": "passed",
-      "durationMs": 10525,
+      "durationMs": 9783,
       "facts": [
         {
           "key": "route:/login",

@@ -40,6 +40,10 @@ BASE_URL=http://localhost:4300 RUN_LABEL=angular18 FINERACT_SERVER=https://dev.m
 
 # Compare the two runs
 node scripts/compare.js angular14 angular18
+
+# Render both runs (and the comparison) as an HTML dashboard
+node scripts/dashboard.js angular14 angular18
+(cd results && python3 -m http.server 4500)   # then open http://localhost:4500
 ```
 
 Outputs per run: `results/<RUN_LABEL>/parity-report.{json,md}` and `results/<RUN_LABEL>/screenshots/*.png`.
@@ -49,6 +53,11 @@ The Playwright HTML report and traces (on failure) live in `results/<RUN_LABEL>/
 non-zero only for **behavioural** differences (flow status or recorded facts). Pixel differences in
 screenshots are reported with changed-pixel counts and diff images but are informational, since
 Angular Material 18 is expected to shift styling.
+
+`dashboard.js` writes `results/index.html`: per-run pass/fail cards with each flow's recorded facts
+and checkpoint screenshots side by side, plus the behavioural comparison table. It reads the two
+`parity-report.json` files and the comparison report, so it needs both runs to have completed. Serve
+`results/` (not the file directly) so the screenshot paths resolve.
 
 Use the same `FINERACT_SERVER` for both runs so backend data does not masquerade as a UI difference.
 
