@@ -1,8 +1,8 @@
 # generated snapshots; only the baseline is tracked
-*
-!.gitignore
-!baseline/
-baseline/*.log
-baseline/*.diff.png
-baseline/*.failed.png
-baseline/compare-report.txt
+/*
+!/.gitignore
+!/baseline/
+/baseline/*.log
+/baseline/*.diff.png
+/baseline/*.failed.png
+/baseline/compare-report.txt
