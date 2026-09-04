@@ -27,7 +27,7 @@
       width: 90%;
       padding: 0;
       .header {
-        background-color: mat.get-color-from-palette($primary, 500);
+        background-color: mat.m2-get-color-from-palette($primary, 500);
 
         padding: 1%;
         .header-title-group {
@@ -56,7 +56,7 @@
             border-radius: 20px;
           }
           .signature {
-            background-color: mat.get-color-from-palette($primary, 500);
+            background-color: mat.m2-get-color-from-palette($primary, 500);
           }
         }
         .account-actions {
