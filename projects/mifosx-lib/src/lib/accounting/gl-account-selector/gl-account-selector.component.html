@@ -1,4 +1,4 @@
-<mat-form-field fxFlex="100%" *ngIf="required">
+<mat-form-field class="flex-w-100" *ngIf="required">
   <mat-label>{{'labels.inputs.' + inputLabel | translate}}</mat-label>
 
   <mat-select required [formControl]="inputFormControl2">
@@ -14,7 +14,7 @@
   </mat-error>
 </mat-form-field>
 
-<mat-form-field fxFlex="100%" *ngIf="!required">
+<mat-form-field class="flex-w-100" *ngIf="!required">
   <mat-label>{{'labels.inputs.' + inputLabel | translate}}</mat-label>
 
   <mat-select [formControl]="inputFormControl2">

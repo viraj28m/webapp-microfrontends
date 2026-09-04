@@ -1,0 +1,18 @@
+{
+  "name": "mifos-e2e-parity",
+  "version": "0.1.0",
+  "private": true,
+  "description": "External behavioral-parity harness for the Mifos web app (Angular 14 -> Angular 18 migration). Runs unchanged against any BASE_URL.",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report",
+    "compare": "node scripts/compare.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1",
+    "@types/node": "20.14.2",
+    "pixelmatch": "5.3.0",
+    "pngjs": "7.0.0"
+  }
+}

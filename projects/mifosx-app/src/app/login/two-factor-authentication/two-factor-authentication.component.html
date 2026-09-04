@@ -5,17 +5,17 @@
 <!-- Select delivery method to receive OTP -->
 <p *ngIf="!otpRequested">{{"labels.text.Please select a delivery method" | translate}}:</p>
 
-<form fxLayout="column" *ngIf="!otpRequested" [formGroup]="twoFactorAuthenticationDeliveryMethodForm" class="two-factor-auth-form"
+<form *ngIf="!otpRequested" [formGroup]="twoFactorAuthenticationDeliveryMethodForm" class="two-factor-auth-form"
   (ngSubmit)="requestOTP()">
 
-  <mat-radio-group fxLayout="column" fxFlexAlign="center" formControlName="twoFactorAuthenticationDeliveryMethod">
+  <mat-radio-group class="two-factor-auth-delivery-methods" formControlName="twoFactorAuthenticationDeliveryMethod">
     <mat-radio-button *ngFor="let twoFactorAuthenticationDeliveryMethod of twoFactorAuthenticationDeliveryMethods"
       [value]="twoFactorAuthenticationDeliveryMethod">
       {{"labels.inputs.Send" | translate}} {{ twoFactorAuthenticationDeliveryMethod.name }} {{"labels.inputs.to" | translate}} {{ twoFactorAuthenticationDeliveryMethod.target }}
     </mat-radio-button>
   </mat-radio-group>
 
-  <button mat-raised-button color="primary" fxFlexAlign="center" fxFlexFill [disabled]="!twoFactorAuthenticationDeliveryMethodForm.valid">
+  <button mat-raised-button color="primary" class="two-factor-auth-button-fill" [disabled]="!twoFactorAuthenticationDeliveryMethodForm.valid">
     {{"labels.buttons.Request OTP" | translate}}
     <mat-spinner [diameter]="20" *ngIf="loading"></mat-spinner>
   </button>
@@ -25,10 +25,10 @@
 <!-- Show input for OTP -->
 <p *ngIf="otpRequested">{{"labels.text.Please enter the OTP" | translate}}:</p>
 
-<form fxLayout="column" *ngIf="otpRequested" [formGroup]="twoFactorAuthenticationForm" class="two-factor-auth-form"
+<form *ngIf="otpRequested" [formGroup]="twoFactorAuthenticationForm" class="two-factor-auth-form"
   (ngSubmit)="validateOTP()">
 
-  <mat-form-field fxFlexAlign="center" class="two-factor-auth-input">
+  <mat-form-field class="two-factor-auth-input">
     <span matPrefix>
       <fa-icon icon="user-shield" class="m-r-10"></fa-icon>
     </span>
@@ -45,13 +45,13 @@
     </mat-error>
   </mat-form-field>
 
-  <button mat-raised-button color="primary" fxFlexAlign="center" class="two-factor-auth-button"
+  <button mat-raised-button color="primary" class="two-factor-auth-button"
     [disabled]="!twoFactorAuthenticationForm.valid">
     {{"labels.buttons.Validate OTP" | translate}}
     <mat-spinner [diameter]="20" *ngIf="loading"></mat-spinner>
   </button>
 
-  <button type="button" mat-button fxFlexAlign="center" class="two-factor-auth-button" (click)="resendOTP()"
+  <button type="button" mat-button class="two-factor-auth-button" (click)="resendOTP()"
     [disabled]="loading || resendOTPLoading">
     {{"labels.buttons.Resend OTP" | translate}}
     <mat-spinner [diameter]="20" *ngIf="resendOTPLoading"></mat-spinner>

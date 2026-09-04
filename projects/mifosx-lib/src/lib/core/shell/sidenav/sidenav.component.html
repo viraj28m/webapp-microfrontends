@@ -3,7 +3,7 @@
   'sidebar-compact': sidenavCollapsed
   }">
 
-  <div class="navigation-panel" fxLayout="column">
+  <div class="flex-column navigation-panel">
 
     <!-- TODO: Allow customization by organization -->
     <div class="app-brand" [routerLink]="['/home']">
@@ -122,7 +122,7 @@
 
 <ng-template #templateLogo let-popover="popover">
   <p class="mw300">{{"labels.text.Welcome page logo from anywhere" | translate}}</p>
-  <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="2%" fxLayout.lt-md="column">
+  <div class="flex-row flex-justify-end flex-gap-2p flex-column-lt-md">
     <button mat-raised-button color="warn" (click)="popover.close();closeConfigurationWizard()">{{"labels.buttons.Close" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();previousStep()">{{"labels.buttons.Back" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();showPopover(templateUserPanel,userPanel,'bottom', true);">{{"labels.buttons.Next" | translate}}</button>
@@ -132,7 +132,7 @@
 <ng-template #templateUserPanel let-popover="popover">
   <h2>{{'labels.menus.User Panel' | translate}}</h2>
   <p class="mw300">{{"labels.text.Section Buttons" | translate}}</p>
-  <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="2%" fxLayout.lt-md="column">
+  <div class="flex-row flex-justify-end flex-gap-2p flex-column-lt-md">
     <button mat-raised-button color="warn" (click)="popover.close();closeConfigurationWizard()">{{"labels.buttons.Close" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();showPopover(templateLogo,logo,'bottom', true);">{{"labels.buttons.Back" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();showPopover(templateFrequentlyAccessed,frequentlyAccessed,'bottom', true);">{{"labels.buttons.Next" | translate}}</button>
@@ -142,7 +142,7 @@
 <ng-template #templateFrequentlyAccessed let-popover="popover">
   <h2>{{'labels.menus.Frequently Accessed' | translate}}</h2>
   <p class="mw300">{{"labels.text.Shortcut to the frequently accessed components" | translate}}</p>
-  <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="2%" fxLayout.lt-md="column">
+  <div class="flex-row flex-justify-end flex-gap-2p flex-column-lt-md">
     <button mat-raised-button color="warn" (click)="popover.close();closeConfigurationWizard()">{{"labels.buttons.Close" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();showPopover(templateUserPanel,userPanel,'bottom', true);">{{"labels.buttons.Back" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();showPopover(templateDashboard,dashboard,'bottom', true);">{{"labels.buttons.Next" | translate}}</button>
@@ -152,7 +152,7 @@
 <ng-template #templateDashboard let-popover="popover">
   <h2>{{'labels.menus.Dashboard' | translate}}</h2>
   <p class="mw300">{{"labels.text.User Dashboard Component" | translate}}</p>
-  <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="2%" fxLayout.lt-md="column">
+  <div class="flex-row flex-justify-end flex-gap-2p flex-column-lt-md">
     <button mat-raised-button color="warn" (click)="popover.close();closeConfigurationWizard()">{{"labels.buttons.Close" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();showPopover(templateFrequentlyAccessed,frequentlyAccessed,'bottom', true);">{{"labels.buttons.Back" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();showPopover(templateNavigation,navigation,'bottom', true);">{{"labels.buttons.Next" | translate}}</button>
@@ -162,7 +162,7 @@
 <ng-template #templateNavigation let-popover="popover">
   <h2>{{'labels.menus.Navigation' | translate}}</h2>
   <p class="mw300">{{"labels.text.User Entity navigation screen" | translate}}</p>
-  <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="2%" fxLayout.lt-md="column">
+  <div class="flex-row flex-justify-end flex-gap-2p flex-column-lt-md">
     <button mat-raised-button color="warn" (click)="popover.close();closeConfigurationWizard()">{{"labels.buttons.Close" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();showPopover(templateDashboard,dashboard,'bottom', true);">{{"labels.buttons.Back" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();showPopover(templateFrequentPostings,frequentPostings,'top', true);">{{"labels.buttons.Next" | translate}}</button>
@@ -172,7 +172,7 @@
 <ng-template #templateFrequentPostings let-popover="popover">
   <h2>{{'labels.menus.Frequent Postings' | translate}}</h2>
   <p class="mw300">{{"labels.text.Shortcut accounting rules" | translate}}</p>
-  <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="2%" fxLayout.lt-md="column">
+  <div class="flex-row flex-justify-end flex-gap-2p flex-column-lt-md">
     <button mat-raised-button color="warn" (click)="popover.close();closeConfigurationWizard()">{{"labels.buttons.Close" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();showPopover(templateNavigation,navigation,'bottom', true);">{{"labels.buttons.Back" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();showPopover(templateCreateJournalEntry,createJournalEntry,'top', true);">{{"labels.buttons.Next" | translate}}</button>
@@ -182,7 +182,7 @@
 <ng-template #templateCreateJournalEntry let-popover="popover">
   <h2>{{'labels.menus.Create Journal Entry' | translate}}</h2>
   <p class="mw300">{{"labels.text.Shortcut entry screen" | translate}}</p>
-  <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="2%" fxLayout.lt-md="column">
+  <div class="flex-row flex-justify-end flex-gap-2p flex-column-lt-md">
     <button mat-raised-button color="warn" (click)="popover.close();closeConfigurationWizard()">{{"labels.buttons.Close" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();showPopover(templateFrequentPostings,frequentPostings,'top', true);">{{"labels.buttons.Back" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();showPopover(templateChartOfAccounts,chartOfAccounts,'top', true);">{{"labels.buttons.Next" | translate}}</button>
@@ -192,7 +192,7 @@
 <ng-template #templateChartOfAccounts let-popover="popover">
   <h2>{{'labels.menus.Chart of Accounts' | translate}}</h2>
   <p class="mw300">{{"labels.text.Shortcut accounts screen" | translate}}</p>
-  <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="2%" fxLayout.lt-md="column">
+  <div class="flex-row flex-justify-end flex-gap-2p flex-column-lt-md">
     <button mat-raised-button color="warn" (click)="popover.close();closeConfigurationWizard()">{{"labels.buttons.Close" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();showPopover(templateCreateJournalEntry,createJournalEntry,'top', true);">{{"labels.buttons.Back" | translate}}</button>
     <button mat-raised-button color="primary" (click)="popover.close();nextStep()">{{"labels.buttons.Next" | translate}}</button>

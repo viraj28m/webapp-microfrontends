@@ -1,10 +1,10 @@
-<div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="2%">
+<div class="flex-row flex-column-lt-md flex-gap-2p">
 
-  <mat-form-field [fxFlex]="flex || '83%'">
+  <mat-form-field class="flex-w-custom" [ngStyle]="{ '--flex-max-width': flex || '83%' }">
     <input matInput [readonly]="true" [value]="fileName || ''" placeholder="No file selected">
   </mat-form-field>
 
-  <span fxFlex="10%" fxFlexAlign="center">
+  <span class="flex-w-10 flex-self-center">
     <button mat-button (click)="uploadFile.click()">
       <fa-icon icon="folder-open" size="lg"></fa-icon>
       &nbsp;&nbsp;

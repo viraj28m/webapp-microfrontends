@@ -1,0 +1,12 @@
+
+.table-toolbar {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+
+  .table-filter {
+    flex: 1 1 100%;
+    max-width: 50%;
+    box-sizing: border-box;
+  }
+}

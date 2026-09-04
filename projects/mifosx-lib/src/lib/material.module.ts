@@ -48,6 +48,8 @@ import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 @NgModule({
   exports: [
     DragDropModule,
+    // No template in this library uses the fx* directives; the re-export only
+    // serves mifosx-app templates, which still rely on them.
     FlexLayoutModule,
     LayoutModule,
     MatAutocompleteModule,
