@@ -1,13 +1,13 @@
 <span *ngIf="accountTitle">
-  <div fxFlex="{{withTitle}}" class="header">
+  <div class="flex-w-custom header" [ngStyle]="{ '--flex-max-width': withTitle }">
     {{'labels.inputs.' + accountTitle | translate}}
   </div>
 
-  <div fxFlex="{{withAccount}}">
+  <div class="flex-w-custom" [ngStyle]="{ '--flex-max-width': withAccount }">
     {{glAccountValue()}}
   </div>
 </span>
 
-<div fxFlex="100%" *ngIf="!accountTitle">
+<div class="flex-w-100" *ngIf="!accountTitle">
   {{glAccountValue()}}
 </div>

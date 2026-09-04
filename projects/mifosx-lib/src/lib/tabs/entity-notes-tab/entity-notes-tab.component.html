@@ -3,12 +3,12 @@
   <h3>{{ 'labels.heading.Notes' | translate }}</h3>
 
   <div>
-    <form #formRef="ngForm" [formGroup]="noteForm" fxLayout="row" fxLayoutAlign="start baseline" fxLayoutGap="20px"
+    <form class="flex-row flex-justify-start flex-items-baseline flex-gap-20" #formRef="ngForm" [formGroup]="noteForm"
       (ngSubmit)="addNote()">
-      <mat-form-field fxFlex="calc(90%-20px)">
+      <mat-form-field class="flex-w-calc-90">
         <textarea required formControlName="note" matInput placeholder="Write a note ...." cdkTextareaAutosize cdkAutosizeMinRows="2"></textarea>
       </mat-form-field>
-      <button mat-raised-button fxFlex color="primary" [disabled]="!noteForm.valid">
+      <button class="flex-initial" mat-raised-button color="primary" [disabled]="!noteForm.valid">
         <fa-icon icon="plus" class="m-r-10"></fa-icon>{{ 'labels.buttons.Add' | translate }}
       </button>
     </form>
@@ -22,7 +22,7 @@
         <span>Created by: {{entityNote.createdByUsername}}</span><br />
         <span>Date: {{entityNote.createdOn | dateFormat}}</span>
       </p>
-      <div fxLayout="row" fxLayoutAlign="flex-start">
+      <div class="flex-row flex-justify-start">
         <button mat-button color="primary" (click)="editNote(entityNote.id, entityNote.note, i)">
           <fa-icon icon="edit"></fa-icon>
         </button>

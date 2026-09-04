@@ -1,14 +1,16 @@
 <h1 mat-dialog-title>{{ data.title }}</h1>
 
-<div mat-dialog-content [formGroup]="form" [fxLayout]="layout.columns > 1 ? 'row wrap' : 'column'" fxLayout.lt-md="column" [fxLayoutGap]="(layout.columns > 1 ? layout.gap : 0) + '%'" fxLayoutGap.lt-md="0%">
+<div mat-dialog-content [formGroup]="form"
+  [ngClass]="layout.columns > 1 ? 'flex-row-wrap flex-column-lt-md flex-gap-2p-gt-sm' : 'flex-column'">
 
-  <div *ngFor="let formfield of formfields" [fxFlex]="layout.flex + '%'" fxFlex.lt-md="100%">
-    <mifosx-formfield [formfield]="formfield" [form]="form" fxFlexFill></mifosx-formfield>
+  <div *ngFor="let formfield of formfields" class="flex-w-custom flex-w-100-lt-md"
+    [ngStyle]="{ '--flex-max-width': layout.flex + '%' }">
+    <mifosx-formfield class="flex-fill" [formfield]="formfield" [form]="form"></mifosx-formfield>
   </div>
 
 </div>
 
-<mat-dialog-actions fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="2%">
+<mat-dialog-actions class="flex-row flex-column-xs flex-justify-center flex-gap-2p">
   <button mat-raised-button mat-dialog-close>{{ 'labels.buttons.' + layout.cancelButtonText | translate }}</button>
   <button mat-raised-button color="primary" [mat-dialog-close]="{ data: form }" [disabled]="!form.valid || form.pristine">{{ 'labels.buttons.' + layout.addButtonText | translate }}</button>
 </mat-dialog-actions>
