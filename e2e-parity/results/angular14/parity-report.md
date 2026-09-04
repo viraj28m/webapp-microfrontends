@@ -1,20 +1,20 @@
 # Parity report: angular14
 
 - Base URL: http://localhost:4200
-- Started: 2026-09-04T08:51:54.080Z
+- Started: 2026-09-04T15:00:08.300Z
 - Result: **9/9 passed**, 0 failed, 0 skipped
 
 | Flow | Status | Duration |
 |---|---|---|
 | authenticated shell renders toolbar, sidebar and user identity | passed | 8.0s |
-| Institution menu exposes Clients / Groups / Centers and opens Clients | passed | 7.2s |
-| login page layout: cover panel shown on desktop, hidden on phones | passed | 6.3s |
-| login page renders and demo credentials authenticate | passed | 7.4s |
-| navigate to Chart of Accounts and verify GL account listing | passed | 9.0s |
-| sidebar navigation to Dashboard and back Home | passed | 7.4s |
-| sidebar opens Navigation and office drill-down renders the detail card | passed | 9.2s |
-| view a single GL account (read-only detail page) | passed | 8.6s |
-| wrong password is rejected and user stays on login | passed | 9.4s |
+| Institution menu exposes Clients / Groups / Centers and opens Clients | passed | 7.9s |
+| login page layout: cover panel shown on desktop, hidden on phones | passed | 6.4s |
+| login page renders and demo credentials authenticate | passed | 8.8s |
+| navigate to Chart of Accounts and verify GL account listing | passed | 9.5s |
+| sidebar navigation to Dashboard and back Home | passed | 8.0s |
+| sidebar opens Navigation and office drill-down renders the detail card | passed | 9.1s |
+| view a single GL account (read-only detail page) | passed | 8.7s |
+| wrong password is rejected and user stays on login | passed | 9.8s |
 
 ## authenticated shell renders toolbar, sidebar and user identity
 
