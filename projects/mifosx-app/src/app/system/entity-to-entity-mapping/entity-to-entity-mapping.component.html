@@ -30,7 +30,7 @@
     <!---------------- SHOW FILTERING OPTION  ----------->
     <ng-container *ngIf="selectedMappingType > 0">
 
-      <mat-card>
+      <mat-card appearance="outlined">
 
         <form [formGroup]="filterPreferenceForm" (ngSubmit)="showFilteredData()">
           <mat-card-title> {{firstMappingEntity}} {{'labels.text.access to' | translate}} {{secondMappingEntity}} </mat-card-title>

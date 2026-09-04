@@ -4,7 +4,7 @@
 
     <div fxLayout="column" fxLayoutGap="4%">
 
-      <mat-card>
+      <mat-card appearance="outlined">
 
         <mat-card-content>
 
@@ -57,7 +57,7 @@
 
       <div cdkDropList (cdkDropListDropped)="dropQuestion($event)" fxLayout="column" fxLayoutGap="4%">
 
-        <mat-card cdkDrag cdkDragLockAxis="y" formArrayName="questionDatas" *ngFor="let question of questionDatas.controls; let questionIndex = index; last as isLast">
+        <mat-card appearance="outlined" cdkDrag cdkDragLockAxis="y" formArrayName="questionDatas" *ngFor="let question of questionDatas.controls; let questionIndex = index; last as isLast">
 
           <mat-card-content>
 

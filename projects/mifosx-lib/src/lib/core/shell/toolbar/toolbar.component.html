@@ -9,7 +9,7 @@
     <fa-icon *ngIf="sidenavCollapsed" icon="chevron-right"></fa-icon>
   </button>
 
-  <nav mat-tab-nav-bar backgroundColor="primary" class="ml-1">
+  <nav mat-tab-nav-bar [tabPanel]="tabPanel" backgroundColor="primary" class="ml-1">
 
     <a #institution mat-tab-link class="tab-link" [matMenuTriggerFor]="institutionMenu" #institutionMenuTrigger="matMenuTrigger">
       <fa-icon class="mr-05" icon="university" size="lg"></fa-icon>
@@ -43,6 +43,7 @@
     </span>
 
   </nav>
+  <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
 
   <span class="flex-auto"></span>
 

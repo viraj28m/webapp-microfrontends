@@ -6,7 +6,7 @@
   mifosx-centers-view {
     .center-card {
       .header {
-        background-color: mat.get-color-from-palette($primary, 500);
+        background-color: mat.m2-get-color-from-palette($primary, 500);
       }
     }
   }

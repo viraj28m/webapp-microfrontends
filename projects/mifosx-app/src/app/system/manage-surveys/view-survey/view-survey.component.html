@@ -6,7 +6,7 @@
 </div>
 
 <div class="container m-b-20">
-  <mat-card>
+  <mat-card appearance="outlined">
     <mat-card-header fxLayout="column">
       <mat-card-title>Survey</mat-card-title>
       <mat-divider [inset]="true"></mat-divider>
@@ -55,14 +55,14 @@
 </div>
 
 <div class="container m-b-20">
-  <mat-card class="questions">
+  <mat-card appearance="outlined" class="questions">
     <mat-card-header fxLayout="column">
       <mat-card-title>Questions</mat-card-title>
       <mat-divider [inset]="true"></mat-divider>
     </mat-card-header>
     <mat-card-content>
       <div class="survey_questions" *ngFor="let questionData of surveyData.questionDatas; index as i">
-        <mat-card>
+        <mat-card appearance="outlined">
           <mat-card-content>
             <div>Question: {{i+1}}</div>
             <div fxLayout="row" id="key_text">

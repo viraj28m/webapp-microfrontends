@@ -4,6 +4,7 @@
 
     <div class="navigation-column">
 
+      <mat-card appearance="outlined" fxLayout="column">
       <mat-card class="navigation-card">
 
         <mat-card-content class="navigation-card-content">
@@ -61,6 +62,7 @@
 
     <div class="navigation-column">
 
+      <mat-card appearance="outlined" fxLayout="column" *ngIf="selectedItem">
       <mat-card class="navigation-card" *ngIf="selectedItem">
 
         <ng-container *ngIf="selectedItem.itemType === 'office'">

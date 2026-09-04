@@ -2,6 +2,7 @@
 import { Component, OnInit, Input, EventEmitter, Output, ViewChild, AfterViewInit, ElementRef, TemplateRef, AfterContentChecked, ChangeDetectorRef } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSidenav } from '@angular/material/sidenav';
+import { MatTabLink } from '@angular/material/tabs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 
@@ -28,7 +29,7 @@ import { ConfigurationWizardComponent } from '@mifosx-lib/configuration-wizard/c
 export class ToolbarComponent implements OnInit, AfterViewInit, AfterContentChecked {
 
   /* Reference of institution */
-  @ViewChild('institution') institution: ElementRef<any>;
+  @ViewChild('institution', { read: ElementRef }) institution: ElementRef<any>;
   /* Template for popover on institution */
   @ViewChild('templateInstitution') templateInstitution: TemplateRef<any>;
   /* Reference of appMenu */
@@ -118,8 +119,9 @@ export class ToolbarComponent implements OnInit, AfterViewInit, AfterContentChec
    * @param position String.
    * @param backdrop Boolean.
    */
-  showPopover(template: TemplateRef<any>, target: ElementRef<any> | HTMLElement): void {
-    setTimeout(() => this.popoverService.open(template, target, 'bottom', true, {}), 200);
+  showPopover(template: TemplateRef<any>, target: ElementRef<any> | HTMLElement | MatTabLink): void {
+    const origin = target instanceof MatTabLink ? target.elementRef : target;
+    setTimeout(() => this.popoverService.open(template, origin, 'bottom', true, {}), 200);
   }
 
   /**

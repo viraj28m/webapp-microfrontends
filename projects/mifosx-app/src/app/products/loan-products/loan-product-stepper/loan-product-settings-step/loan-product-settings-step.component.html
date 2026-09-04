@@ -161,7 +161,7 @@
           {{ delinquencyBucket.name }}
         </mat-option>
       </mat-select>
-      <button mat-button *ngIf="loanProductSettingsForm.controls.delinquencyBucketId" matSuffix mat-icon-button
+      <button *ngIf="loanProductSettingsForm.controls.delinquencyBucketId" matSuffix mat-icon-button
         aria-label="Clear" (click)="clearProperty($event, 'delinquencyBucketId')">
         <mat-icon>close</mat-icon>
       </button>

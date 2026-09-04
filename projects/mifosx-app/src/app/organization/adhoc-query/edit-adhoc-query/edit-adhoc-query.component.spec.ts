@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditAdhocQueryComponent } from './edit-adhoc-query.component';
 
@@ -6,7 +6,7 @@ describe('EditAdhocQueryComponent', () => {
   let component: EditAdhocQueryComponent;
   let fixture: ComponentFixture<EditAdhocQueryComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ EditAdhocQueryComponent ]
     })

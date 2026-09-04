@@ -5,11 +5,11 @@
   mifosx-shares-account-view {
     .shares-account-card {
       .header {
-        background-color: mat.get-color-from-palette($primary, 500);
+        background-color: mat.m2-get-color-from-palette($primary, 500);
       }
       .table-headers {
-        background-color: mat.get-color-from-palette($primary, 500);
-        color: mat.get-contrast-color-from-palette($primary, 500);
+        background-color: mat.m2-get-color-from-palette($primary, 500);
+        color: mat.m2-get-contrast-color-from-palette($primary, 500);
       }
     }
   }

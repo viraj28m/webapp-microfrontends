@@ -1,0 +1,8 @@
+{
+  "build:fineract-client": {"status": "ok", "summary": "Build at: 2026-09-04T06:00:46.815Z - Time: 13847ms"},
+  "build:mifosx-lib": {"status": "failed", "summary": "1 compiler errors"},
+  "build:mifosx-app": {"status": "ok", "summary": "Build at: 2026-09-04T06:02:10.870Z - Hash: 9820937cb25b6a6b - Time: 71478ms"},
+  "test:mifosx-lib": {"status": "failed", "summary": "Executed 0 of 0 SUCCESS (0.001 secs / 0 secs)"},
+  "test:mifosx-app": {"status": "failed", "summary": "Executed 0 of 0 ERROR (0.006 secs / 0 secs)"},
+  "meta": {"status": "ok", "summary": "angular/core 14.3.0, node v20.18.1"}
+}

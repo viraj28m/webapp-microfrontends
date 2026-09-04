@@ -1,6 +1,6 @@
 <div class="container">
 
-  <mat-card>
+  <mat-card appearance="outlined">
 
     <form [formGroup]="amazonS3ConfigurationForm" (ngSubmit)="submit()">
 
@@ -19,7 +19,7 @@
           <mat-form-field>
             <mat-label>{{'labels.inputs.S3 Access Key' | translate}}</mat-label>
             <input matInput required type="{{ accessKeyInputType }}" formControlName="s3_access_key">
-            <button mat-button *ngIf="amazonS3ConfigurationForm.controls.s3_access_key.value" matSuffix mat-icon-button
+            <button *ngIf="amazonS3ConfigurationForm.controls.s3_access_key.value" matSuffix mat-icon-button
               (mousedown)="accessKeyInputType = 'text'" (mouseup)="accessKeyInputType = 'password'">
               <fa-icon *ngIf="accessKeyInputType === 'password'" icon="eye"></fa-icon>
               <fa-icon *ngIf="accessKeyInputType === 'text'" icon="eye-slash"></fa-icon>
@@ -32,7 +32,7 @@
           <mat-form-field>
             <mat-label>{{'labels.inputs.S3 Secret Key' | translate}}</mat-label>
             <input matInput required type="{{ secretKeyInputType }}" formControlName="s3_secret_key">
-            <button mat-button *ngIf="amazonS3ConfigurationForm.controls.s3_secret_key.value" matSuffix mat-icon-button
+            <button *ngIf="amazonS3ConfigurationForm.controls.s3_secret_key.value" matSuffix mat-icon-button
               (mousedown)="secretKeyInputType = 'text'" (mouseup)="secretKeyInputType = 'password'">
               <fa-icon *ngIf="secretKeyInputType === 'password'" icon="eye"></fa-icon>
               <fa-icon *ngIf="secretKeyInputType === 'text'" icon="eye-slash"></fa-icon>

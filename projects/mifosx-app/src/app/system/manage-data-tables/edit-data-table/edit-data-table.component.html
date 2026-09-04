@@ -1,6 +1,6 @@
 <div class="container">
 
-  <mat-card>
+  <mat-card appearance="outlined">
 
     <form [formGroup]="dataTableForm" (ngSubmit)="submit()">
 
@@ -39,7 +39,7 @@
 
         <div fxLayout="row wrap" fxLayoutGap="60%" fxLayout.lt-md="column">
 
-          <p fxFlex="20%" class="mat-title">Columns</p>
+          <p fxFlex="20%" class="mat-headline-6">Columns</p>
 
           <button mat-raised-button fxFlex="20%" type="button" color="primary" (click)="addColumn()">
             <fa-icon icon="plus" class="m-r-10"></fa-icon>

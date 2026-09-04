@@ -14,6 +14,15 @@
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
+// TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.
+//  The following line adds:
+//    1. Default typography styles for all components
+//    2. Styles for typography hierarchy classes (e.g. .mat-headline-1)
+//  If you specify typography styles for the components you use elsewhere, you should delete this line.
+//  If you don't need the default component typographies but still want the hierarchy styles,
+//  you can delete this line and instead use:
+//    `@include mat.legacy-typography-hierarchy(mat.define-typography-config());`
+@include mat.all-component-typographies();
 @include mat.core();
 
 
@@ -23,14 +32,14 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$mifosx-app-primary: mat.define-palette($primary-palette);
-$mifosx-app-accent: mat.define-palette($accent-palette);
+$mifosx-app-primary: mat.m2-define-palette($primary-palette);
+$mifosx-app-accent: mat.m2-define-palette($accent-palette);
 
 // The warn palette is optional (defaults to red).
-$mifosx-app-warn: mat.define-palette(mat.$red-palette);
+$mifosx-app-warn: mat.m2-define-palette(mat.$m2-red-palette);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$mifosx-app-theme: mat.define-light-theme($mifosx-app-primary, $mifosx-app-accent, $mifosx-app-warn);
+$mifosx-app-theme: mat.m2-define-light-theme($mifosx-app-primary, $mifosx-app-accent, $mifosx-app-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -47,12 +56,12 @@ $mifosx-app-theme: mat.define-light-theme($mifosx-app-primary, $mifosx-app-accen
 
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
-$mifosx-app-dark-primary: mat.define-palette($dark-primary-palette);
-$mifosx-app-dark-accent: mat.define-palette($dark-accent-palette);
-$mifosx-app-dark-warn: mat.define-palette(mat.$red-palette);
+$mifosx-app-dark-primary: mat.m2-define-palette($dark-primary-palette);
+$mifosx-app-dark-accent: mat.m2-define-palette($dark-accent-palette);
+$mifosx-app-dark-warn: mat.m2-define-palette(mat.$m2-red-palette);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$mifosx-app-dark-theme: mat.define-dark-theme($mifosx-app-dark-primary, $mifosx-app-dark-accent, $mifosx-app-dark-warn);
+$mifosx-app-dark-theme: mat.m2-define-dark-theme($mifosx-app-dark-primary, $mifosx-app-dark-accent, $mifosx-app-dark-warn);
 
 // Include theme styles for core and each component used in your app.
 .dark-theme {

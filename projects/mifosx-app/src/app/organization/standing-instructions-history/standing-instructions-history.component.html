@@ -1,6 +1,6 @@
 <div class="container input">
 
-  <mat-card *ngIf="!isCollapsed">
+  <mat-card appearance="outlined" *ngIf="!isCollapsed">
 
     <form [formGroup]="instructionForm" (ngSubmit)="search()">
 
@@ -75,7 +75,7 @@
 
 <div class="container output" *ngIf="isCollapsed">
 
-  <mat-card>
+  <mat-card appearance="outlined">
 
     <div class="m-b-20">
       <button mat-raised-button color="primary" (click)="isCollapsed = false">

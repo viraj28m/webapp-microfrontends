@@ -1,6 +1,6 @@
 /** Angular Imports */
 import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot } from '@angular/router';
 
 /** rxjs Imports */
 import { Observable } from 'rxjs';
@@ -12,7 +12,7 @@ import { OrganizationService } from '@mifosx-app/organization/organization.servi
  * Employee data resolver.
  */
 @Injectable()
-export class EmployeeResolver implements Resolve<Object> {
+export class EmployeeResolver  {
 
   /**
    * @param {OrganizationService} organizationService Organization service.

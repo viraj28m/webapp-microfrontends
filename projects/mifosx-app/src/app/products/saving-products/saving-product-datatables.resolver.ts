@@ -1,16 +1,12 @@
 import { Injectable } from '@angular/core';
-import {
-  Router, Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot
-} from '@angular/router';
+import { Router, RouterStateSnapshot, ActivatedRouteSnapshot } from '@angular/router';
 import { SystemService } from '@mifosx-app/system/system.service';
 import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SavingProductDatatablesResolver implements Resolve<boolean> {
+export class SavingProductDatatablesResolver  {
 
   /**
    * @param {SystemService} systemService Products service.

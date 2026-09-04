@@ -55,7 +55,9 @@
             "tsConfig": "projects/mifosx-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "stylePreprocessorOptions": {
-              "includePaths": [ "projects/mifosx-lib/src" ]
+              "includePaths": [
+                "projects/mifosx-lib/src"
+              ]
             },
             "assets": [
               "projects/mifosx-app/src/favicon.ico",
@@ -103,10 +105,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "mifosx-app:build:production"
+              "buildTarget": "mifosx-app:build:production"
             },
             "development": {
-              "browserTarget": "mifosx-app:build:development"
+              "buildTarget": "mifosx-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -114,7 +116,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mifosx-app:build"
+            "buildTarget": "mifosx-app:build"
           }
         },
         "test": {
@@ -132,7 +134,12 @@
             "styles": [
               "projects/mifosx-app/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/mifosx-lib/src"
+              ]
+            }
           }
         }
       }

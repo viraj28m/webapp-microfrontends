@@ -1,0 +1,325 @@
+{
+  "meta": {
+    "capturedAt": "2026-09-04T06:05:58.706Z",
+    "angularCore": "14.3.0",
+    "node": "v20.18.1",
+    "failures": []
+  },
+  "scenarios": {
+    "login-page": {
+      "title": "Login",
+      "hash": "#/login",
+      "headings": [
+        "Mifos X"
+      ],
+      "buttons": [
+        "nights_stay",
+        "Login",
+        "Forgot Password?",
+        "Resources",
+        "Community",
+        "Contribute"
+      ],
+      "labels": [
+        "Language",
+        "Language",
+        "Server",
+        "Server",
+        "Tenant",
+        "Tenant",
+        "Username *",
+        "Username",
+        "Password *",
+        "Password",
+        "Remember me"
+      ],
+      "links": [
+        "Mifos Initiative",
+        "global community",
+        "Get involved!"
+      ],
+      "errors": [],
+      "inputs": [
+        "input[type=text][formcontrolname=username]",
+        "input[type=password][formcontrolname=password]",
+        "input[type=checkbox][formcontrolname=null]"
+      ],
+      "disabledButtons": [
+        "Login"
+      ],
+      "checkboxes": [
+        "Remember me"
+      ],
+      "bodyText": "Mifos X Mifos X is designed by the Mifos Initiative. A global community that aims to speed the elimination of poverty by enabling Organizations to more effectively and efficiently deliver responsible financial services to the world’s poor and unbanked.Sounds interesting? Get involved! English Language nights_stay https://demo.fineract.dev Server default Tenant Username * Password * Remember me Login Forgot Password? Resources Community Contribute Mifos 240417 - 29d3d08e Fineract 1.9.0 - abc1234 https://demo.fineract.dev Mifos X by Mifos",
+      "consoleErrors": [],
+      "apiCalls": [
+        "OPTIONS /actuator/info",
+        "GET /actuator/info"
+      ],
+      "blockedRequests": [
+        "https://fonts.googleapis.com/icon?family=Material+Icons",
+        "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Mono:300"
+      ]
+    },
+    "login-validation": {
+      "title": "Login",
+      "hash": "#/login",
+      "headings": [
+        "Mifos X"
+      ],
+      "buttons": [
+        "nights_stay",
+        "Login",
+        "Forgot Password?",
+        "Resources",
+        "Community",
+        "Contribute"
+      ],
+      "labels": [
+        "Language",
+        "Language",
+        "Server",
+        "Server",
+        "Tenant",
+        "Tenant",
+        "Username *",
+        "Username",
+        "Password *",
+        "Password",
+        "Remember me"
+      ],
+      "links": [
+        "Mifos Initiative",
+        "global community",
+        "Get involved!"
+      ],
+      "errors": [
+        "Username is required",
+        "Password is required"
+      ],
+      "inputs": [
+        "input[type=text][formcontrolname=username]",
+        "input[type=password][formcontrolname=password]",
+        "input[type=checkbox][formcontrolname=null]"
+      ],
+      "disabledButtons": [
+        "Login"
+      ],
+      "checkboxes": [
+        "Remember me"
+      ],
+      "bodyText": "Mifos X Mifos X is designed by the Mifos Initiative. A global community that aims to speed the elimination of poverty by enabling Organizations to more effectively and efficiently deliver responsible financial services to the world’s poor and unbanked.Sounds interesting? Get involved! English Language nights_stay https://demo.fineract.dev Server default Tenant Username * Username is required Password * Password is required Remember me Login Forgot Password? Resources Community Contribute Mifos 240417 - 29d3d08e Fineract 1.9.0 - abc1234 https://demo.fineract.dev Mifos X by Mifos",
+      "consoleErrors": [],
+      "apiCalls": [],
+      "blockedRequests": []
+    },
+    "login-password-toggle": {
+      "title": "Login",
+      "hash": "#/login",
+      "headings": [
+        "Mifos X"
+      ],
+      "buttons": [
+        "nights_stay",
+        "Login",
+        "Forgot Password?",
+        "Resources",
+        "Community",
+        "Contribute"
+      ],
+      "labels": [
+        "Language",
+        "Language",
+        "Server",
+        "Server",
+        "Tenant",
+        "Tenant",
+        "Username *",
+        "Username",
+        "Password *",
+        "Password",
+        "Remember me"
+      ],
+      "links": [
+        "Mifos Initiative",
+        "global community",
+        "Get involved!"
+      ],
+      "errors": [
+        "Username is required"
+      ],
+      "inputs": [
+        "input[type=text][formcontrolname=username]",
+        "input[type=password][formcontrolname=password]",
+        "input[type=checkbox][formcontrolname=null]"
+      ],
+      "disabledButtons": [
+        "Login"
+      ],
+      "checkboxes": [
+        "Remember me"
+      ],
+      "bodyText": "Mifos X Mifos X is designed by the Mifos Initiative. A global community that aims to speed the elimination of poverty by enabling Organizations to more effectively and efficiently deliver responsible financial services to the world’s poor and unbanked.Sounds interesting? Get involved! English Language nights_stay https://demo.fineract.dev Server default Tenant Username * Username is required Password * Remember me Login Forgot Password? Resources Community Contribute Mifos 240417 - 29d3d08e Fineract 1.9.0 - abc1234 https://demo.fineract.dev Mifos X by Mifos",
+      "passwordInputType": {
+        "before": "password",
+        "during": "text",
+        "after": "password"
+      },
+      "consoleErrors": [],
+      "apiCalls": [],
+      "blockedRequests": []
+    },
+    "home-after-login": {
+      "title": "Home",
+      "hash": "#/home",
+      "headings": [
+        "Warning"
+      ],
+      "buttons": [
+        "language",
+        "nights_stay",
+        "Dashboard",
+        "Close",
+        "Close"
+      ],
+      "labels": [
+        "Language",
+        "Language",
+        "Search Activity",
+        "Search Activity"
+      ],
+      "links": [
+        "Accounting"
+      ],
+      "errors": [],
+      "inputs": [
+        "input[type=text][formcontrolname=null]"
+      ],
+      "disabledButtons": [],
+      "checkboxes": [],
+      "bodyText": "Dashboard Navigation Checker Inbox and Tasks Individual Collection Sheet Notifications Frequent Postings Create Journal Entry Chart of Accounts Keyboard Shortcuts Help Institution Accounting Reports Admin Self Service Configuration Wizard English Language nights_stay Home Dashboard Welcome, mifos! Search Activity Mifos 240417 - 29d3d08e Fineract 1.9.0 - abc1234 https://demo.fineract.dev Mifos X by Mifos mifos successfully logged in! Close Warning This system is for authorized use only. Unauthorized access will result in possible legal action. By accessing this system, you acknowledge that you are authorized to do so and that all data stored and processed here is confidential. Close",
+      "credentialsStored": true,
+      "consoleErrors": [],
+      "apiCalls": [
+        "OPTIONS /authentication",
+        "POST /authentication",
+        "OPTIONS /v1/configurations/name/enable_business_date",
+        "OPTIONS /actuator/info",
+        "GET /v1/configurations/name/enable_business_date",
+        "GET /actuator/info"
+      ],
+      "blockedRequests": []
+    },
+    "sidenav": {
+      "title": "Home",
+      "hash": "#/home",
+      "headings": [],
+      "buttons": [
+        "language",
+        "nights_stay",
+        "Dashboard"
+      ],
+      "labels": [
+        "Language",
+        "Language",
+        "Search Activity",
+        "Search Activity"
+      ],
+      "links": [
+        "Accounting"
+      ],
+      "errors": [],
+      "inputs": [
+        "input[type=text][formcontrolname=null]"
+      ],
+      "disabledButtons": [],
+      "checkboxes": [],
+      "bodyText": "Dashboard Navigation Checker Inbox and Tasks Individual Collection Sheet Notifications Frequent Postings Create Journal Entry Chart of Accounts Keyboard Shortcuts Help Institution Accounting Reports Admin Self Service Configuration Wizard English Language nights_stay Home Dashboard Welcome, mifos! Search Activity Mifos 240417 - 29d3d08e Fineract 1.9.0 - abc1234 https://demo.fineract.dev Mifos X by Mifos",
+      "sidenavItems": [
+        "Dashboard",
+        "Navigation",
+        "Checker Inbox and Tasks",
+        "Individual Collection Sheet",
+        "Notifications",
+        "Frequent Postings",
+        "Create Journal Entry",
+        "Chart of Accounts",
+        "Keyboard Shortcuts",
+        "Help"
+      ],
+      "consoleErrors": [],
+      "apiCalls": [],
+      "blockedRequests": []
+    },
+    "not-found": {
+      "title": "APP_NAME",
+      "hash": "#/this/route/does/not/exist",
+      "headings": [],
+      "buttons": [
+        "Back"
+      ],
+      "labels": [],
+      "links": [],
+      "errors": [],
+      "inputs": [],
+      "disabledButtons": [],
+      "checkboxes": [],
+      "bodyText": "404 Oops.. Looks like this page doesn't exist. Back",
+      "consoleErrors": [],
+      "apiCalls": [],
+      "blockedRequests": []
+    },
+    "redirect-to-login-when-logged-out": {
+      "title": "Login",
+      "hash": "#/login",
+      "headings": [
+        "Mifos X"
+      ],
+      "buttons": [
+        "nights_stay",
+        "Login",
+        "Forgot Password?",
+        "Resources",
+        "Community",
+        "Contribute"
+      ],
+      "labels": [
+        "Language",
+        "Language",
+        "Tenant",
+        "Tenant",
+        "Username *",
+        "Username",
+        "Password *",
+        "Password",
+        "Remember me"
+      ],
+      "links": [
+        "Mifos Initiative",
+        "global community",
+        "Get involved!"
+      ],
+      "errors": [],
+      "inputs": [
+        "input[type=text][formcontrolname=username]",
+        "input[type=password][formcontrolname=password]",
+        "input[type=checkbox][formcontrolname=null]"
+      ],
+      "disabledButtons": [
+        "Login"
+      ],
+      "checkboxes": [
+        "Remember me"
+      ],
+      "bodyText": "Mifos X Mifos X is designed by the Mifos Initiative. A global community that aims to speed the elimination of poverty by enabling Organizations to more effectively and efficiently deliver responsible financial services to the world’s poor and unbanked.Sounds interesting? Get involved! English Language nights_stay Tenant Username * Password * Remember me Login Forgot Password? Resources Community Contribute Mifos 240417 - 29d3d08e Fineract 1.9.0 - abc1234 https://demo.fineract.dev Mifos X by Mifos",
+      "consoleErrors": [
+        "ERROR TypeError: Cannot read properties of null (reading '0')"
+      ],
+      "apiCalls": [
+        "OPTIONS /actuator/info",
+        "GET /actuator/info"
+      ],
+      "blockedRequests": []
+    }
+  }
+}

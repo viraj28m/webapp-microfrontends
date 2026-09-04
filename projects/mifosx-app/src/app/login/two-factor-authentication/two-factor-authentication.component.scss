@@ -1,4 +1,5 @@
 .two-factor-auth-form {
+  /* TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version. */
   mat-radio-button {
     margin-bottom: 0.5rem;
 

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UndoClientRejectionComponent } from './undo-client-rejection.component';
 
@@ -6,7 +6,7 @@ describe('UndoClientRejectionComponent', () => {
   let component: UndoClientRejectionComponent;
   let fixture: ComponentFixture<UndoClientRejectionComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ UndoClientRejectionComponent ]
     })

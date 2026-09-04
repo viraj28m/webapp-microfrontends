@@ -1,4 +1,4 @@
-<mat-card class="center-card">
+<mat-card appearance="outlined" class="center-card">
   <mat-card-header fxLayout="column" class="header">
     <mat-card-title-group class="header-title-group">
       <div class="profile-image-container">
@@ -110,7 +110,7 @@
 
   </mat-card-header>
   <mat-card-content>
-    <nav mat-tab-nav-bar class="navigation-tabs">
+    <nav mat-tab-nav-bar [tabPanel]="tabPanel" class="navigation-tabs">
       <a mat-tab-link [routerLink]="['./general']" routerLinkActive #general="routerLinkActive"
         [active]="general.isActive">
         {{"labels.inputs.General" | translate}}
@@ -127,6 +127,7 @@
         </a>
       </span>
     </nav>
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
     <router-outlet></router-outlet>
   </mat-card-content>
 </mat-card>

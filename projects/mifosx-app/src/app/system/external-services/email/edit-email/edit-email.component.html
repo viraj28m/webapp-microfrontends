@@ -1,6 +1,6 @@
 <div class="container">
 
-  <mat-card>
+  <mat-card appearance="outlined">
 
     <form [formGroup]="emailConfigurationForm" (ngSubmit)="submit()">
 
@@ -19,7 +19,7 @@
           <mat-form-field>
             <mat-label>{{'labels.inputs.Password' | translate}}</mat-label>
             <input matInput required type="{{ passwordInputType }}" formControlName="password">
-            <button mat-button *ngIf="emailConfigurationForm.controls.password.value" matSuffix mat-icon-button
+            <button *ngIf="emailConfigurationForm.controls.password.value" matSuffix mat-icon-button
               (mousedown)="passwordInputType = 'text'" (mouseup)="passwordInputType = 'password'">
               <fa-icon *ngIf="passwordInputType === 'password'" icon="eye"></fa-icon>
               <fa-icon *ngIf="passwordInputType === 'text'" icon="eye-slash"></fa-icon>
