@@ -1,0 +1,6 @@
+node_modules/
+# Everything under results/ is generated. Committed baselines are whitelisted below.
+results/*
+!results/angular14/
+results/angular14/html-report/
+results/angular14/test-output/
