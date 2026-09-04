@@ -1,4 +1,4 @@
-<mat-card-header fxLayout="row" fxLayoutGap="5%">
+<mat-card-header class="navigation-header">
   <fa-icon class="main-icon" icon="users" size="3x"></fa-icon>
   <mat-card-title-group>
     <div class="mat-typography">
@@ -22,53 +22,53 @@
 <mat-card-content>
     <mat-tab-group>
       <mat-tab label="Details">
-        <div fxLayout="row wrap" class="content">
+        <div class="content">
 
-          <div fxFlex="50%" class="mat-body-strong">
+          <div class="content-cell mat-body-strong">
             {{"labels.inputs.Activation Date" | translate}}
           </div>
 
-          <div fxFlex="50%">
+          <div class="content-cell">
             {{ groupData.activationDate | dateFormat }}
           </div>
 
-          <div fxFlex="50%" class="mat-body-strong">
+          <div class="content-cell mat-body-strong">
             {{"labels.inputs.Associated Officer" | translate}}
           </div>
 
-          <div fxFlex="50%">
+          <div class="content-cell">
             {{ groupData.staffName }}
           </div>
 
-          <div fxFlex="50%" class="mat-body-strong" *ngIf="groupData.centerName">
+          <div class="content-cell mat-body-strong" *ngIf="groupData.centerName">
             {{"labels.inputs.Associated Center" | translate}}
           </div>
 
-          <div fxFlex="50%" *ngIf="groupData.centerName">
+          <div class="content-cell" *ngIf="groupData.centerName">
             {{ groupData.centerName }}
           </div>
 
-          <div fxFlex="50%" class="mat-body-strong" *ngIf="groupData.collectionMeetingCalendar && groupData.collectionMeetingCalendar.nextTenRecurringDates[0]">
+          <div class="content-cell mat-body-strong" *ngIf="groupData.collectionMeetingCalendar && groupData.collectionMeetingCalendar.nextTenRecurringDates[0]">
             {{"labels.inputs.Next Meeting Date" | translate}}
           </div>
 
-          <div fxFlex="50%" *ngIf="groupData.collectionMeetingCalendar && groupData.collectionMeetingCalendar.nextTenRecurringDates[0]">
+          <div class="content-cell" *ngIf="groupData.collectionMeetingCalendar && groupData.collectionMeetingCalendar.nextTenRecurringDates[0]">
             {{ groupData.collectionMeetingCalendar.nextTenRecurringDates[0] | dateFormat }}
           </div>
 
-          <div fxFlex="50%" class="mat-body-strong" *ngIf="groupData.collectionMeetingCalendar && groupData.collectionMeetingCalendar.humanReadable">
+          <div class="content-cell mat-body-strong" *ngIf="groupData.collectionMeetingCalendar && groupData.collectionMeetingCalendar.humanReadable">
             {{"labels.inputs.Meeting Frequency" | translate}}
           </div>
 
-          <div fxFlex="50%" *ngIf="groupData.collectionMeetingCalendar && groupData.collectionMeetingCalendar.humanReadable">
+          <div class="content-cell" *ngIf="groupData.collectionMeetingCalendar && groupData.collectionMeetingCalendar.humanReadable">
             {{ groupData.collectionMeetingCalendar.humanReadable }}
           </div>
 
-          <div fxFlex="50%" class="mat-body-strong">
+          <div class="content-cell mat-body-strong">
             {{"labels.inputs.Number of Clients" | translate}}
           </div>
 
-          <div fxFlex="50%">
+          <div class="content-cell">
             {{ clientData ? clientData.length : '' }}
           </div>
 

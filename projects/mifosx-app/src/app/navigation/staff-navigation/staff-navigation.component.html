@@ -1,4 +1,4 @@
-<mat-card-header fxLayout="row" fxLayoutGap="5%" class="header">
+<mat-card-header class="header navigation-header">
   <fa-icon class="main-icon" icon="user" size="3x"></fa-icon>
   <mat-card-title-group>
     <div class="mat-typography">
@@ -20,37 +20,37 @@
 </mat-card-header>
 
 <mat-card-content>
-  <div fxLayout="row wrap" class="content">
+  <div class="content">
 
-    <div fxFlex="50%" class="mat-body-strong">
+    <div class="content-cell mat-body-strong">
       {{"labels.inputs.Joined On" | translate}}
     </div>
 
-    <div fxFlex="50%">
+    <div class="content-cell">
       {{ employeeData.joiningDate | dateFormat }}
     </div>
 
-    <div fxFlex="50%" class="mat-body-strong">
+    <div class="content-cell mat-body-strong">
       {{"labels.inputs.Loan Officer" | translate}}
     </div>
 
-    <div fxFlex="50%">
+    <div class="content-cell">
       {{ employeeData.isLoanOfficer | yesNo }}
     </div>
 
-    <div fxFlex="50%" class="mat-body-strong" *ngIf="employeeData.mobileNo">
+    <div class="content-cell mat-body-strong" *ngIf="employeeData.mobileNo">
       {{"labels.inputs.Mobile Number" | translate}}
     </div>
 
-    <div fxFlex="50%" *ngIf="employeeData.mobileNo">
+    <div class="content-cell" *ngIf="employeeData.mobileNo">
       {{ employeeData.mobileNo }}
     </div>
 
-    <div fxFlex="50%" class="mat-body-strong">
+    <div class="content-cell mat-body-strong">
       {{"labels.inputs.Number of Centers" | translate}}
     </div>
 
-    <div fxFlex="50%">
+    <div class="content-cell">
       {{ centerData ? centerData.length : '' }}
     </div>
 

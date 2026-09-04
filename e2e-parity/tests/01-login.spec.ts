@@ -32,6 +32,28 @@ test.describe('Login', () => {
     await checkpoint(page, testInfo, 'home after login');
   });
 
+  test('login page layout: cover panel shown on desktop, hidden on phones', async ({ page }, testInfo) => {
+    await openLoginPage(page);
+    const cover = page.getByRole('heading', { name: 'Mifos X' }).first();
+    const loginButton = page.getByRole('button', { name: 'Login', exact: true });
+
+    // Desktop: cover (left) and form (right) side by side.
+    await expect(cover).toBeVisible();
+    const [coverBox, formBox] = await Promise.all([cover.boundingBox(), loginButton.boundingBox()]);
+    expect(coverBox && formBox && formBox.x > coverBox.x).toBe(true);
+    await expect(page.getByRole('button', { name: 'Resources' })).toBeVisible();
+    parityFact(testInfo, 'login-cover-visible-desktop', true);
+
+    // Phone width: cover and resources links hidden, form still usable.
+    await page.setViewportSize({ width: 480, height: 900 });
+    await expect(cover).toBeHidden();
+    await expect(page.getByRole('button', { name: 'Resources' })).toBeHidden();
+    await expect(page.getByLabel('Username')).toBeVisible();
+    await expect(loginButton).toBeVisible();
+    parityFact(testInfo, 'login-cover-hidden-phone', true);
+    await checkpoint(page, testInfo, 'login page phone');
+  });
+
   test('wrong password is rejected and user stays on login', async ({ page }, testInfo) => {
     await openLoginPage(page);
     await page.getByLabel('Username').fill(CREDENTIALS.username);
