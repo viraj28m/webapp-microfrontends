@@ -55,7 +55,9 @@
             "tsConfig": "projects/mifosx-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "stylePreprocessorOptions": {
-              "includePaths": [ "projects/mifosx-lib/src" ]
+              "includePaths": [
+                "projects/mifosx-lib/src"
+              ]
             },
             "assets": [
               "projects/mifosx-app/src/favicon.ico",
@@ -132,7 +134,12 @@
             "styles": [
               "projects/mifosx-app/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/mifosx-lib/src"
+              ]
+            }
           }
         }
       }
