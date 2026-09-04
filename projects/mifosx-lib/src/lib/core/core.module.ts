@@ -38,6 +38,7 @@ import { LanguageSelectorComponent } from './shell/language-selector/language-se
 import { ThemeToggleComponent } from './shell/theme-toggle/theme-toggle.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SearchToolComponent } from './shell/search-tool/search-tool.component';
+import { NotificationsTrayComponent } from '../notifications-tray/notifications-tray.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
@@ -65,7 +66,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     LanguageSelectorComponent,
     ThemeToggleComponent,
-    SearchToolComponent
+    SearchToolComponent,
+    NotificationsTrayComponent
   ],
   exports: [
     CommonModule,
@@ -74,7 +76,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     LanguageSelectorComponent,
     ThemeToggleComponent,
-    SearchToolComponent
+    SearchToolComponent,
+    NotificationsTrayComponent
   ],
 
   providers: [

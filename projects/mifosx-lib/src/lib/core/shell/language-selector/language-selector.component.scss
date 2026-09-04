@@ -2,3 +2,29 @@
 .languageselector {
   max-width: 6rem;
 }
+
+// In the primary toolbar the selector renders as white-on-primary text
+// rather than a filled field.
+:host-context(#mifosx-toolbar) {
+  #language-selector,
+  .languageselector {
+    max-width: 8rem;
+  }
+
+  ::ng-deep {
+    .mat-mdc-text-field-wrapper {
+      background-color: transparent;
+    }
+
+    .mat-mdc-form-field-subscript-wrapper,
+    .mdc-line-ripple {
+      display: none;
+    }
+
+    .mdc-floating-label,
+    .mat-mdc-select-value-text,
+    .mat-mdc-select-arrow {
+      color: #fff;
+    }
+  }
+}

@@ -9,41 +9,36 @@
     <fa-icon *ngIf="sidenavCollapsed" icon="chevron-right"></fa-icon>
   </button>
 
-  <nav mat-tab-nav-bar [tabPanel]="tabPanel" backgroundColor="primary" class="ml-1">
+  <nav mat-tab-nav-bar backgroundColor="primary" class="ml-1">
 
     <a #institution mat-tab-link class="tab-link" [matMenuTriggerFor]="institutionMenu" #institutionMenuTrigger="matMenuTrigger">
       <fa-icon class="mr-05" icon="university" size="lg"></fa-icon>
       {{'labels.menus.Institution' | translate}}
     </a>
 
-    <span class="flex-hide-lt-lg">
+    <a #accounting mat-tab-link class="tab-link flex-hide-lt-lg" [routerLink]="['/accounting']">
+      <fa-icon class="mr-05" icon="money-bill-alt" size="lg"></fa-icon>
+      {{'labels.menus.Accounting' | translate}}
+    </a>
+    <a #reports mat-tab-link class="tab-link flex-hide-lt-lg" [matMenuTriggerFor]="reportsMenu" #reportsMenuTrigger="matMenuTrigger" >
+      <fa-icon class="mr-05" icon="chart-bar" size="lg"></fa-icon>
+      {{'labels.menus.Reports' | translate}}
+    </a>
+    <a #admin mat-tab-link class="tab-link flex-hide-lt-lg" [matMenuTriggerFor]="adminMenu" #adminMenuTrigger="matMenuTrigger">
+      <fa-icon class="mr-05" icon="shield-alt" size="lg"></fa-icon>
+      {{'labels.menus.Admin' | translate}}
+    </a>
+    <a #selfService mat-tab-link class="tab-link flex-hide-lt-lg" [matMenuTriggerFor]="selfServiceMenu" #selfServiceMenuTrigger="matMenuTrigger">
+      <fa-icon class="mr-05" icon="users" size="lg"></fa-icon>
+      {{'labels.menus.Self Service' | translate}}
+    </a>
 
-      <a #accounting mat-tab-link class="tab-link" [routerLink]="['/accounting']">
-        <fa-icon class="mr-05" icon="money-bill-alt" size="lg"></fa-icon>
-        {{'labels.menus.Accounting' | translate}}
-      </a>
-      <a #reports mat-tab-link class="tab-link" [matMenuTriggerFor]="reportsMenu" #reportsMenuTrigger="matMenuTrigger" >
-        <fa-icon class="mr-05" icon="chart-bar" size="lg"></fa-icon>
-        {{'labels.menus.Reports' | translate}}
-      </a>
-      <a #admin mat-tab-link class="tab-link" [matMenuTriggerFor]="adminMenu" #adminMenuTrigger="matMenuTrigger">
-        <fa-icon class="mr-05" icon="shield-alt" size="lg"></fa-icon>
-        {{'labels.menus.Admin' | translate}}
-      </a>
-      <a #selfService mat-tab-link class="tab-link" [matMenuTriggerFor]="selfServiceMenu" #selfServiceMenuTrigger="matMenuTrigger">
-        <fa-icon class="mr-05" icon="users" size="lg"></fa-icon>
-        {{'labels.menus.Self Service' | translate}}
-      </a>
-
-      <a #configWizard mat-tab-link class="tab-link" (click)="openDialog()">
-        <fa-icon class="mr-05" icon="info" size="lg"></fa-icon>
-        {{'labels.menus.Configuration Wizard' | translate}}
-      </a>
-
-    </span>
+    <a #configWizard mat-tab-link class="tab-link flex-hide-lt-lg" (click)="openDialog()">
+      <fa-icon class="mr-05" icon="info" size="lg"></fa-icon>
+      {{'labels.menus.Configuration Wizard' | translate}}
+    </a>
 
   </nav>
-  <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
 
   <span class="flex-auto"></span>
 
@@ -60,7 +55,7 @@
   </button>
 
   <div #notifications>
-    <!-- mifosx-notifications-tray is declared in MifosxLibModule, which is not in this module's scope -->
+    <mifosx-notifications-tray class="flex-hide-lt-md"></mifosx-notifications-tray>
   </div>
 
   <div #themeToggle>
