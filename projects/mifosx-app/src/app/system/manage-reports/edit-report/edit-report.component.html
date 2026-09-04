@@ -1,6 +1,6 @@
 <div class="container">
 
-  <mat-card>
+  <mat-card appearance="outlined">
 
     <form [formGroup]="reportForm" (ngSubmit)="submit()">
 
@@ -81,7 +81,7 @@
 
         <div fxLayout="row wrap" fxLayoutGap="60%" fxLayout.lt-md="column">
 
-          <p fxFlex="20%" class="mat-title">Report Parameters</p>
+          <p fxFlex="20%" class="mat-headline-6">Report Parameters</p>
 
           <button mat-raised-button fxFlex="20%" type="button" *ngIf="!reportData.coreReport" color="primary"
             (click)="addReportParameter()">

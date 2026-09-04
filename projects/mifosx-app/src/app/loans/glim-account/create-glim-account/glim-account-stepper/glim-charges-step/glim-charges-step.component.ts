@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatDialog } from '@angular/material/dialog';
+import { MatTableDataSource } from '@angular/material/table';
 import { Dates } from '@mifosx-lib/core/utils/dates';
 import { FormDialogComponent } from '@mifosx-lib/form-dialog/form-dialog.component';
 import { DatepickerBase } from '@mifosx-lib/form-dialog/formfield/model/datepicker-base';

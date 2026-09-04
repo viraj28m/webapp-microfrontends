@@ -19,11 +19,13 @@
         .header {
           background-color: mat.get-color-from-palette($primary, 500);
           color: mat.get-contrast-color-from-palette($primary, 500);
+          /* TODO(mdc-migration): The following rule targets internal classes of select that may no longer apply for the MDC version. */
           mat-label,
           .mat-select-value,
           .mat-select-arrow {
             color: mat.get-contrast-color-from-palette($primary, 500);
           }
+          /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
           .mat-form-field-underline,
           .mat-form-field-ripple {
             background-color: mat.get-contrast-color-from-palette($primary, 500);

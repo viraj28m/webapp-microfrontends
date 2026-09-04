@@ -1,6 +1,6 @@
 <div class="container m-b-20">
 
-  <mat-card>
+  <mat-card appearance="outlined">
 
     <form [formGroup]="clientScreenReportForm" (ngSubmit)="generate()">
 
@@ -38,7 +38,7 @@
 
 <div #output class="container">
 
-  <mat-card fxLayout="column" fxLayoutGap="3%">
+  <mat-card appearance="outlined" fxLayout="column" fxLayoutGap="3%">
 
     <div fxLayoutAlign="end">
       <button mat-stroked-button color="primary" [disabled]="!template" (click)="print()">

@@ -1,6 +1,6 @@
 <div class="container form">
 
-  <mat-card *ngIf="isCollapsed">
+  <mat-card appearance="outlined" *ngIf="isCollapsed">
 
     <form [formGroup]="xbrlForm" (ngSubmit)="runreport()">
 
@@ -35,7 +35,7 @@
 
 <div class="container">
 
-  <mat-card *ngIf="!isCollapsed">
+  <mat-card appearance="outlined" *ngIf="!isCollapsed">
 
     <button mat-raised-button color="primary" (click)="isCollapsed = !isCollapsed">
       {{"labels.buttons.Parameters" | translate}}

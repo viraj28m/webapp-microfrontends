@@ -1,6 +1,6 @@
 <div class="container">
 
-  <mat-card>
+  <mat-card appearance="outlined">
 
     <form [formGroup]="floatingRateForm" (ngSubmit)="submit()">
 
@@ -38,7 +38,7 @@
 
         <div fxLayout="row wrap" fxLayoutGap="70%" fxLayoutGap.lt-md="0px" class="m-b-10" fxLayout.lt-md="column">
 
-          <p fxFlex="25%" class="mat-title">Floating Rate Periods <i class="fas fa-question" matTooltip="Floating interest rate and start date for this floating rate scheme"></i></p>
+          <p fxFlex="25%" class="mat-headline-6">Floating Rate Periods <i class="fas fa-question" matTooltip="Floating interest rate and start date for this floating rate scheme"></i></p>
 
           <button mat-mini-fab type="button" color="primary" (click)="addFloatingRatePeriod()">
             <fa-icon icon="plus"></fa-icon>

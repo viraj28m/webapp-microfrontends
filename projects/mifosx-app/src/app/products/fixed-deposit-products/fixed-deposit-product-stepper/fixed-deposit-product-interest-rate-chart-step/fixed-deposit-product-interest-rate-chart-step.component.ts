@@ -1,9 +1,9 @@
 /** Angular Imports */
 import { Component, OnInit, Input } from '@angular/core';
 import { UntypedFormGroup, UntypedFormBuilder, Validators, UntypedFormArray } from '@angular/forms';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { LegacyTooltipPosition as TooltipPosition } from '@angular/material/legacy-tooltip';
+import { TooltipPosition } from '@angular/material/tooltip';
 
 /** Custom Components */
 import { FormDialogComponent } from '@mifosx-lib/form-dialog/form-dialog.component';

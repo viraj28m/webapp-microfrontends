@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UntypedFormGroup, UntypedFormBuilder, UntypedFormArray, Validators, UntypedFormControl, AbstractControl } from '@angular/forms';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import { MatDialog } from '@angular/material/dialog';
 
 import { FormDialogComponent } from '@mifosx-lib/form-dialog/form-dialog.component';
 import { DeleteDialogComponent } from '@mifosx-lib/delete-dialog/delete-dialog.component';

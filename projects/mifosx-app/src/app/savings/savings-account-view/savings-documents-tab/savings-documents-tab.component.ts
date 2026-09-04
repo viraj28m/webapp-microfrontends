@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { SavingsService } from '@mifosx-app/savings/savings.service';
 import { SettingsService } from '@mifosx-lib/settings/settings.service';
