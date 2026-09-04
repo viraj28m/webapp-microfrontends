@@ -1,6 +1,6 @@
 /** Angular Imports */
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { HTTP_INTERCEPTORS, HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouteReuseStrategy, RouterModule } from '@angular/router';
 
 /** Translation Imports */
@@ -46,59 +46,66 @@ import { ReactiveFormsModule } from '@angular/forms';
  *
  * Main app shell components and singleton services should be here.
  */
-@NgModule({ declarations: [
-        ShellComponent,
-        SidenavComponent,
-        ToolbarComponent,
-        BreadcrumbComponent,
-        ContentComponent,
-        FooterComponent,
-        LanguageSelectorComponent,
-        ThemeToggleComponent,
-        SearchToolComponent
-    ],
-    exports: [
-        CommonModule,
-        MaterialModule,
-        FontAwesomeModule,
-        FooterComponent,
-        LanguageSelectorComponent,
-        ThemeToggleComponent,
-        SearchToolComponent
-    ], imports: [TranslateModule,
-        RouterModule,
-        CommonModule,
-        MaterialModule,
-        FontAwesomeModule,
-        ReactiveFormsModule], providers: [
-        {
-            provide: HttpClient,
-            useClass: HttpService
-        },
-        AuthenticationService,
-        AuthenticationGuard,
-        AuthenticationInterceptor,
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: AuthenticationInterceptor,
-            multi: true
-        },
-        HttpCacheService,
-        ApiPrefixInterceptor,
-        ErrorHandlerInterceptor,
-        CacheInterceptor,
-        ProgressBarService,
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: ProgressInterceptor,
-            multi: true
-        },
-        {
-            provide: RouteReuseStrategy,
-            useClass: RouteReusableStrategy
-        },
-        provideHttpClient(withInterceptorsFromDi())
-    ] })
+@NgModule({
+  imports: [
+    HttpClientModule,
+    TranslateModule,
+    RouterModule,
+    CommonModule,
+    MaterialModule,
+    FontAwesomeModule,
+    ReactiveFormsModule
+  ],
+  declarations: [
+    ShellComponent,
+    SidenavComponent,
+    ToolbarComponent,
+    BreadcrumbComponent,
+    ContentComponent,
+    FooterComponent,
+    LanguageSelectorComponent,
+    ThemeToggleComponent,
+    SearchToolComponent
+  ],
+  exports: [
+    CommonModule,
+    MaterialModule,
+    FontAwesomeModule,
+    FooterComponent,
+    LanguageSelectorComponent,
+    ThemeToggleComponent,
+    SearchToolComponent
+  ],
+
+  providers: [
+    {
+      provide: HttpClient,
+      useClass: HttpService
+    },
+    AuthenticationService,
+    AuthenticationGuard,
+    AuthenticationInterceptor,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthenticationInterceptor,
+      multi: true
+    },
+    HttpCacheService,
+    ApiPrefixInterceptor,
+    ErrorHandlerInterceptor,
+    CacheInterceptor,
+    ProgressBarService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ProgressInterceptor,
+      multi: true
+    },
+    {
+      provide: RouteReuseStrategy,
+      useClass: RouteReusableStrategy
+    }
+  ]
+})
 export class CoreModule {
 
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {

@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MifosxLibModule } from '@mifosx-lib/mifosx-lib.module'; 
 
 /** Environment Configuration */
@@ -52,31 +52,38 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
-@NgModule({ declarations: [WebAppComponent, NotFoundComponent],
-    bootstrap: [WebAppComponent], imports: [MifosxLibModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        PortalModule,
-        CoreModule,
-        HomeModule,
-        LoginModule,
-        ProfileModule,
-        SettingsModule,
-        NavigationModule,
-        ClientsModule,
-        ReportsModule,
-        GroupsModule,
-        CentersModule,
-        AccountingModule,
-        SelfServiceModule,
-        SystemModule,
-        ProductsModule,
-        OrganizationModule,
-        TemplatesModule,
-        UsersModule,
-        NotificationsModule,
-        SearchModule,
-        CollectionsModule,
-        TasksModule,
-        AppRoutingModule], providers: [DatePipe, provideHttpClient(withInterceptorsFromDi())] })
+@NgModule({
+  imports: [
+    MifosxLibModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    PortalModule,
+    CoreModule,
+    HomeModule,
+    LoginModule,
+    ProfileModule,
+    SettingsModule,
+    NavigationModule,
+    ClientsModule,
+    ReportsModule,
+    GroupsModule,
+    CentersModule,
+    AccountingModule,
+    SelfServiceModule,
+    SystemModule,
+    ProductsModule,
+    OrganizationModule,
+    TemplatesModule,
+    UsersModule,
+    NotificationsModule,
+    SearchModule,
+    CollectionsModule,
+    TasksModule,
+    AppRoutingModule
+  ],
+  declarations: [WebAppComponent, NotFoundComponent],
+  providers: [DatePipe],
+  bootstrap: [WebAppComponent]
+})
 export class AppModule { }
