@@ -4,7 +4,7 @@
 
     <mat-card-content>
 
-      <nav mat-tab-nav-bar class="navigation-tabs">
+      <nav mat-tab-nav-bar [tabPanel]="tabPanel" class="navigation-tabs">
         <a mat-tab-link [routerLink]="['./checker-inbox']" routerLinkActive #checkerInbox="routerLinkActive"
         [active]="checkerInbox.isActive" *mifosxHasPermission="'ALL_FUNCTIONS_READ'">
         {{'labels.inputs.Checker Inbox' | translate}}
@@ -26,6 +26,7 @@
           {{'labels.inputs.Reschedule Loan' | translate}}
         </a>
       </nav>
+      <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
 
       <router-outlet></router-outlet>
 

@@ -107,7 +107,7 @@
 
     </div>
 
-    <nav mat-tab-nav-bar class="navigation-tabs">
+    <nav mat-tab-nav-bar [tabPanel]="tabPanel" class="navigation-tabs">
       <a mat-tab-link [routerLink]="['./transactions']" routerLinkActive #transactions="routerLinkActive"
       [active]="transactions.isActive" *mifosxHasPermission="'READ_SHAREACCOUNTPURCHASE'">
       {{'labels.inputs.Transactions' | translate}}
@@ -121,6 +121,7 @@
       {{'labels.inputs.Dividends' | translate}}
       </a>
     </nav>
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
 
     <router-outlet></router-outlet>
 
