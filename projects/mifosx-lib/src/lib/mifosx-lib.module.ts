@@ -28,7 +28,6 @@ import { SvgIconComponent } from './svg-icon/svg-icon.component';
 import { TenantSelectorComponent } from './tenant-selector/tenant-selector.component';
 import { ThemePickerComponent } from './theme-picker/theme-picker.component';
 import { TransactionPaymentDetailComponent } from './transaction-payment-detail/transaction-payment-detail.component';
-import { NotificationsTrayComponent } from './notifications-tray/notifications-tray.component';
 import { FormfieldComponent } from './form-dialog/formfield/formfield.component';
 import { FormDialogComponent } from './form-dialog/form-dialog.component';
 import { DatatableMultiRowComponent } from './tabs/entity-datatable-tab/datatable-multi-row/datatable-multi-row.component';
@@ -102,7 +101,6 @@ import { CoreModule } from './core/core.module';
     TenantSelectorComponent,
     ThemePickerComponent,
     TransactionPaymentDetailComponent,
-    NotificationsTrayComponent,
     FileUploadComponent,
     FormfieldComponent,
     FormDialogComponent,
@@ -133,7 +131,6 @@ import { CoreModule } from './core/core.module';
     FormsModule,
     ThemePickerComponent,
     TransactionPaymentDetailComponent,
-    NotificationsTrayComponent,
     FileUploadComponent,
     FormDialogComponent,
     ViewJournalEntryComponent,

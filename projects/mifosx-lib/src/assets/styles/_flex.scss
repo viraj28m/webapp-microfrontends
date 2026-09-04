@@ -185,7 +185,7 @@ $flex-lt-lg: 1279.98px; // lt-lg
 // Responsive variants, ordered from the widest to the narrowest breakpoint
 @media (max-width: $flex-lt-lg) {
   .flex-hide-lt-lg {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -204,7 +204,7 @@ $flex-lt-lg: 1279.98px; // lt-lg
   }
 
   .flex-hide-lt-md {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -215,6 +215,6 @@ $flex-lt-lg: 1279.98px; // lt-lg
   }
 
   .flex-hide-lt-sm {
-    display: none;
+    display: none !important;
   }
 }
