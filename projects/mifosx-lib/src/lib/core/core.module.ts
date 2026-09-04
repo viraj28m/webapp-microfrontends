@@ -5,6 +5,7 @@ import { RouteReuseStrategy, RouterModule } from '@angular/router';
 
 /** Translation Imports */
 import { TranslateModule } from '@ngx-translate/core';
+import { BASE_PATH } from '@fineract-lib';
 
 /** Custom Services */
 import { AuthenticationService } from './authentication/authentication.service';
@@ -84,6 +85,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     {
       provide: HttpClient,
       useClass: HttpService
+    },
+    // Generated fineract-client paths already include `/v1`; leave them relative so
+    // ApiPrefixInterceptor prefixes the currently selected server.
+    {
+      provide: BASE_PATH,
+      useValue: ''
     },
     AuthenticationService,
     AuthenticationGuard,
