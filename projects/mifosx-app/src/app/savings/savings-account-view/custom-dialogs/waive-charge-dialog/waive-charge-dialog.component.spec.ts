@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WaiveChargeDialogComponent } from './waive-charge-dialog.component';
 
@@ -6,7 +6,7 @@ describe('WaiveChargeDialogComponent', () => {
   let component: WaiveChargeDialogComponent;
   let fixture: ComponentFixture<WaiveChargeDialogComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ WaiveChargeDialogComponent ]
     })
