@@ -1,0 +1,225 @@
+{
+  "runLabel": "angular14",
+  "baseUrl": "http://localhost:4200",
+  "startedAt": "2026-09-04T07:05:39.785Z",
+  "finishedAt": "2026-09-04T07:06:47.613Z",
+  "summary": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0,
+    "skipped": 0
+  },
+  "flows": [
+    {
+      "flow": "authenticated shell renders toolbar, sidebar and user identity",
+      "file": "tests/02-shell.spec.ts",
+      "status": "passed",
+      "durationMs": 8661,
+      "facts": [
+        {
+          "key": "sidebar-identity",
+          "value": "default / mifos"
+        },
+        {
+          "key": "sidebar-main-items",
+          "value": "Dashboard, Navigation, Checker Inbox and Tasks, Notifications"
+        },
+        {
+          "key": "toolbar-menus",
+          "value": "Institution, Accounting, Reports, Admin"
+        }
+      ],
+      "checkpoints": [
+        {
+          "name": "home shell collapsed sidebar",
+          "file": "authenticated-shell-renders-toolbar-sidebar-and-user-identity--home-shell-collapsed-sidebar.png",
+          "route": "/home"
+        },
+        {
+          "name": "home shell expanded sidebar",
+          "file": "authenticated-shell-renders-toolbar-sidebar-and-user-identity--home-shell-expanded-sidebar.png",
+          "route": "/home"
+        }
+      ]
+    },
+    {
+      "flow": "Institution menu exposes Clients / Groups / Centers and opens Clients",
+      "file": "tests/02-shell.spec.ts",
+      "status": "passed",
+      "durationMs": 9276,
+      "facts": [
+        {
+          "key": "clients-page-actions",
+          "value": "Search, Import Client, Create Client"
+        },
+        {
+          "key": "route:/clients",
+          "value": true
+        }
+      ],
+      "checkpoints": [
+        {
+          "name": "institution menu open",
+          "file": "institution-menu-exposes-clients-groups-centers-and-opens-clients--institution-menu-open.png",
+          "route": "/home"
+        },
+        {
+          "name": "clients list",
+          "file": "institution-menu-exposes-clients-groups-centers-and-opens-clients--clients-list.png",
+          "route": "/clients"
+        }
+      ]
+    },
+    {
+      "flow": "login page renders and demo credentials authenticate",
+      "file": "tests/01-login.spec.ts",
+      "status": "passed",
+      "durationMs": 9550,
+      "facts": [
+        {
+          "key": "login-button-disabled-when-empty",
+          "value": true
+        },
+        {
+          "key": "route:/home",
+          "value": true
+        },
+        {
+          "key": "route:/login",
+          "value": true
+        },
+        {
+          "key": "welcome-banner",
+          "value": "Welcome, mifos!"
+        }
+      ],
+      "checkpoints": [
+        {
+          "name": "login page",
+          "file": "login-page-renders-and-demo-credentials-authenticate--login-page.png",
+          "route": "/login"
+        },
+        {
+          "name": "post-login warning dialog",
+          "file": "login-page-renders-and-demo-credentials-authenticate--post-login-warning-dialog.png",
+          "route": "/home"
+        },
+        {
+          "name": "home after login",
+          "file": "login-page-renders-and-demo-credentials-authenticate--home-after-login.png",
+          "route": "/home"
+        }
+      ]
+    },
+    {
+      "flow": "navigate to Chart of Accounts and verify GL account listing",
+      "file": "tests/03-chart-of-accounts.spec.ts",
+      "status": "passed",
+      "durationMs": 9824,
+      "facts": [
+        {
+          "key": "gl-account-types-seen",
+          "value": "ASSET, EQUITY, EXPENSE, INCOME, LIABILITY"
+        },
+        {
+          "key": "gl-accounts-rows-on-first-page",
+          "value": 10
+        },
+        {
+          "key": "route:/accounting",
+          "value": true
+        },
+        {
+          "key": "route:/accounting/chart-of-accounts",
+          "value": true
+        }
+      ],
+      "checkpoints": [
+        {
+          "name": "accounting landing",
+          "file": "navigate-to-chart-of-accounts-and-verify-gl-account-listing--accounting-landing.png",
+          "route": "/accounting"
+        },
+        {
+          "name": "chart of accounts list",
+          "file": "navigate-to-chart-of-accounts-and-verify-gl-account-listing--chart-of-accounts-list.png",
+          "route": "/accounting/chart-of-accounts"
+        },
+        {
+          "name": "chart of accounts filtered",
+          "file": "navigate-to-chart-of-accounts-and-verify-gl-account-listing--chart-of-accounts-filtered.png",
+          "route": "/accounting/chart-of-accounts"
+        }
+      ]
+    },
+    {
+      "flow": "sidebar navigation to Dashboard and back Home",
+      "file": "tests/02-shell.spec.ts",
+      "status": "passed",
+      "durationMs": 8417,
+      "facts": [
+        {
+          "key": "route:/dashboard",
+          "value": true
+        },
+        {
+          "key": "route:/home",
+          "value": true
+        }
+      ],
+      "checkpoints": [
+        {
+          "name": "dashboard",
+          "file": "sidebar-navigation-to-dashboard-and-back-home--dashboard.png",
+          "route": "/dashboard"
+        }
+      ]
+    },
+    {
+      "flow": "view a single GL account (read-only detail page)",
+      "file": "tests/03-chart-of-accounts.spec.ts",
+      "status": "passed",
+      "durationMs": 10721,
+      "facts": [
+        {
+          "key": "first-gl-account",
+          "value": "000112 Book Cash Account"
+        },
+        {
+          "key": "route:/accounting/chart-of-accounts",
+          "value": true
+        },
+        {
+          "key": "route:/accounting/chart-of-accounts/gl-accounts/view/:id",
+          "value": true
+        }
+      ],
+      "checkpoints": [
+        {
+          "name": "gl account detail",
+          "file": "view-a-single-gl-account-read-only-detail-page--gl-account-detail.png",
+          "route": "/accounting/chart-of-accounts/gl-accounts/view/930"
+        }
+      ]
+    },
+    {
+      "flow": "wrong password is rejected and user stays on login",
+      "file": "tests/01-login.spec.ts",
+      "status": "passed",
+      "durationMs": 10525,
+      "facts": [
+        {
+          "key": "route:/login",
+          "value": true
+        }
+      ],
+      "checkpoints": [
+        {
+          "name": "rejected login",
+          "file": "wrong-password-is-rejected-and-user-stays-on-login--rejected-login.png",
+          "route": "/login"
+        }
+      ]
+    }
+  ]
+}
